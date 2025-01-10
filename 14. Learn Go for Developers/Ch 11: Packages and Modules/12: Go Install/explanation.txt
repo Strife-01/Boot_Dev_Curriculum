@@ -1,0 +1,4 @@
+the go install download and compiles the packages and it adds them in the GOBIN directory so we can use them. They are installed in the local machine
+we can install the current package or we can download and install from a remote directory
+
+the path to GOBIN must be added into the PATH so we can use it directly

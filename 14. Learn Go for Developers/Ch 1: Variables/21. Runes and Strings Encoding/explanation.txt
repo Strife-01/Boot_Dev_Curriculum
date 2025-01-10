@@ -1,0 +1,2 @@
+in go a rune is an alias for an int32 which is perfect and used for individual characters and it can represent Unicode
+Go uses UTF-8 by default.

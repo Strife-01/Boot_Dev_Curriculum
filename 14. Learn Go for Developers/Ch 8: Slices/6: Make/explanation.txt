@@ -1,0 +1,21 @@
+// func make([]T, len, cap) []T
+mySlice := make([]int, 5, 10)
+
+// the capacity argument is usually omitted and defaults to the length
+mySlice := make([]int, 5)
+
+make will create slices where the underlying array has only zeroes
+
+mySlice := []string{"I", "love", "go"} - slice literal
+
+The length of a slice is simply the number of elements it contains. It is accessed using the built-in len() function:
+
+mySlice := []string{"I", "love", "go"}
+fmt.Println(len(mySlice)) // 3
+
+
+The length of a slice is simply the number of elements it contains. It is accessed using the built-in len() function:
+
+mySlice := []string{"I", "love", "go"}
+fmt.Println(len(mySlice)) // 3
+

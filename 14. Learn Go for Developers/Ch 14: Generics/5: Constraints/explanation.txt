@@ -1,0 +1,32 @@
+in go we cannot extend an interface by redeclaring it but, like in structs we can use embedding
+
+type Reader interface {
+  Read(b []byte)(n int, err error)
+}
+
+type ClosableReader interface {
+  Reader
+  Close() error
+}
+
+
+in the generics we use constraints which are just interfaces that constraint the type to a give ones
+
+any is like an empty interface which will match any type
+
+type stringer interface {
+    String() string
+}
+
+// we want to be able to concat any type which can be represented as a string so we create an interface which can take a value and it turns it into a string
+// but we only want those values which can be represented as strings
+func concat[T stringer](vals []T) string {
+    result := ""
+    for _, val := range vals {
+        // this is where the .String() method
+        // is used. That's why we need a more specific
+        // constraint instead of the any constraint
+        result += val.String()
+    }
+    return result
+}

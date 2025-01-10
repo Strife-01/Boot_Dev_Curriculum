@@ -1,0 +1,29 @@
+class Soldier:
+    name = "Legolas"
+    armor = 2
+    num_weapons = 2
+
+
+it is better to use a constructor
+
+class Soldier:
+    def __init__(self):
+        self.name = "Legolas"
+        self.armor = 2
+        self.num_weapons = 2
+
+in Python, the constructor is defined with the __init__(self) method, you can add other parameters for initial states
+
+class Soldier:
+    def __init__(self, name, armor, num_weapons):
+        self.name = name
+        self.armor = armor
+        self.num_weapons = num_weapons
+
+soldier = Soldier("Legolas", 5, 10)
+print(soldier.name)
+# prints "Legolas"
+print(soldier.armor)
+# prints "5"
+print(soldier.num_weapons)
+# prints "10"

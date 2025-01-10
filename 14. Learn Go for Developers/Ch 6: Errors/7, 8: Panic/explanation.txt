@@ -1,0 +1,46 @@
+we have multiple ways to deal with errors
+
+good:
+  implement error types 
+  use the errors type from errors package
+
+func enrichUser(userID string) (User, error) {
+    user, err := getUser(userID)
+    if err != nil {
+        // fmt.Errorf is GOATed: it wraps an error with additional context
+        return User{}, fmt.Errorf("failed to get user: %w", err)
+    }
+    return user, nil
+}
+
+bad:
+  use the panic() function which will crash the program and print the stack trace
+  when the panic() is called the program will then remove stack slabs until it reaches a recover() which you can defer so you "catch" the error
+  otherwise the program crashes
+
+panic/recover is kinda like try/catch
+
+BAAD
+
+func enrichUser(userID string) User {
+    user, err := getUser(userID)
+    if err != nil {
+        panic(err)
+    }
+    return user
+}
+
+func main() {
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println("recovered from panic:", r)
+        }
+    }()
+
+    // this panics, but the defer/recover block catches it
+    // a truly astonishingly bad way to handle errors
+    enrichUser("123")
+}
+
+
+If you want your program to cleanly exit in an unrecoverable way we use log.Fatal()

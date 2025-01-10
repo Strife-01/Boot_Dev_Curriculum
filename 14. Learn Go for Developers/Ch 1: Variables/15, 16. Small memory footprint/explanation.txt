@@ -1,0 +1,6 @@
+go uses way less memory than Java but a little bit more C or Rust.
+Go has heap and a runtime which is an analogus to GlibC
+Go runtime environment has a garbage collector
+Go includes the runtime in the binary that manages everything
+
+JAVA has all the boilerplate

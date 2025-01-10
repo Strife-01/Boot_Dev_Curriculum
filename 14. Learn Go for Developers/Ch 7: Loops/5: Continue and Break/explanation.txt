@@ -1,0 +1,41 @@
+continue
+break
+
+for i := 0; i < 10; i++ {
+  if i % 2 == 0 {
+    continue
+  }
+  fmt.Println(i)
+}
+// 1
+// 3
+// 5
+// 7
+// 9
+
+
+for i := 0; i < 10; i++ {
+  if i == 5 {
+    break
+  }
+  fmt.Println(i)
+}
+// 0
+// 1
+// 2
+// 3
+// 4
+
+
+for i := 0; i < 2; i++ {
+  for j := 0; j < 1000; j++ {
+    if j == 2 {
+      break
+    }
+    fmt.Println(j)
+  }
+}
+// 0
+// 1
+// 0
+// 1

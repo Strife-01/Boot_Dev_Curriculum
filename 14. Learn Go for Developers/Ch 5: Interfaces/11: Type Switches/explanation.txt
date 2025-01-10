@@ -1,0 +1,23 @@
+in go we also have type switches that allows us to check for the type of an underlying interface type in a series
+
+func printNumericValue(num interface{}) {
+	switch v := num.(type) {
+	case int:
+		fmt.Printf("%T\n", v)
+	case string:
+		fmt.Printf("%T\n", v)
+	default:
+		fmt.Printf("%T\n", v)
+	}
+}
+
+func main() {
+	printNumericValue(1)
+	// prints "int"
+
+	printNumericValue("1")
+	// prints "string"
+
+	printNumericValue(struct{}{})
+	// prints "struct {}"
+}

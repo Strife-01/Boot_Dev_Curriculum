@@ -1,0 +1,29 @@
+Currying, from functional programming, it is a concept where a function with multiple parameters can return a partial function
+we can use that function in the sense that the function instead of now taking multiple arguments it takes one at the time and each time
+it returns a function that takes the next argument
+
+
+func main() {
+  squareFunc := selfMath(multiply)
+  doubleFunc := selfMath(add)
+
+  fmt.Println(squareFunc(5))
+  // prints 25
+
+  fmt.Println(doubleFunc(5))
+  // prints 10
+}
+
+func multiply(x, y int) int {
+  return x * y
+}
+
+func add(x, y int) int {
+  return x + y
+}
+
+func selfMath(mathFunc func(int, int) int) func (int) int {
+  return func(x int) int {
+    return mathFunc(x, x)
+  }
+}

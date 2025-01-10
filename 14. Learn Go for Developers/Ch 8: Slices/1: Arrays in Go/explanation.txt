@@ -1,0 +1,5 @@
+fixed size groups of the same type
+
+var myInts [10]int
+
+primes := [6]int{2, 3, 5, 7, 11, 13}

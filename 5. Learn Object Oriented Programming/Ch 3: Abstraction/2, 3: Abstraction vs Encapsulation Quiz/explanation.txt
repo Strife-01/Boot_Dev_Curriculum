@@ -1,0 +1,12 @@
+Abstraction is about reducing complexity. Creating good abstractions is particularly crucial when you're developing libraries for other developers to use. For example, the built-in pow function in Python is an abstraction that hides the complexity of calculating exponents.
+
+pow isn't magic. Somewhere, code that does something like this exists and is called when you use pow:
+
+def pow(base, exponent):
+    result = 1
+    for _ in range(exponent):
+        result *= base
+    return result
+
+
+abstraction is about making usage easier and encapsulation is about implementation complexity

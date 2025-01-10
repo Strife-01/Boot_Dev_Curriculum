@@ -1,0 +1,13 @@
+for INDEX, ELEMENT := range SLICE {
+}
+
+to easily iterate over a slice and not only
+the ELEMENT is a copy of the ELEMENT of the underlying array
+
+fruits := []string{"apple", "banana", "grape"}
+for i, fruit := range fruits {
+    fmt.Println(i, fruit)
+}
+// 0 apple
+// 1 banana
+// 2 grape

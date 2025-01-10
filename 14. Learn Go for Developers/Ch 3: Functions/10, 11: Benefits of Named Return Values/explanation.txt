@@ -1,0 +1,3 @@
+great for documentation
+
+naked return values should be only used in short functions - this comes with named return types

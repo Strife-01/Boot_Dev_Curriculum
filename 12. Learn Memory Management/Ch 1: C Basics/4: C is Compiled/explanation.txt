@@ -1,0 +1,20 @@
+print("starting")
+func_that_doesnt_exist("uh oh")
+print("finished")
+
+prints starting before crashing
+
+#include <stdio.h>
+
+int main() {
+  printf("starting sneklang tools\n");
+  does_not_exist("uh oh");
+  printf("finished sneklang tools\n");
+  return 0;
+}
+
+crashes at compile time when the compiler checks for syntax errors or use before declaration and etc - C is not hoisted
+
+it has a linter installed
+
+there are programming languages that are JIT

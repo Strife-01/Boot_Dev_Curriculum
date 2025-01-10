@@ -1,0 +1,16 @@
+in go only capitalized names are exported outside of our package, otherwise they are only visible in our package
+
+if we go build and have no main function, go will still compile but it will cache the binary to the local build cache. Useful fo error checking
+
+import "example.com/username/mystrings" we replace it with the path for the module we require it and the version
+module example.com/username/hellogo
+
+we import the module name if we want it whole
+
+go 1.23.0
+
+replace example.com/username/mystrings v0.0.0 => ../mystrings
+
+require (
+	example.com/username/mystrings v0.0.0
+)

@@ -1,0 +1,9 @@
+pointer to pointer = a pointer that points to a pointer that points to a value
+
+int value;
+int *pointer;
+int **pointer_pointer;
+
+This allows you to create complex data structures like arrays of pointers, and to modify pointers indirectly
+
+you can go as deep as you want ******...

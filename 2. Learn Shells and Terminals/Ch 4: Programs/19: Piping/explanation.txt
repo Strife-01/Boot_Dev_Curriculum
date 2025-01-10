@@ -1,0 +1,6 @@
+piping is using the output of one program as the input for another
+
+echo "Have you heard the tragedy of Darth Plagueis the Wise?" | wc -w
+# 10
+
+wc is word count

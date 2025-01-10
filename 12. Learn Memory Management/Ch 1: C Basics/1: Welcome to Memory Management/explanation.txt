@@ -1,0 +1,2 @@
+This course will build a garbage collector and will create a small interpretor for the Sneklang programming language in C.
+

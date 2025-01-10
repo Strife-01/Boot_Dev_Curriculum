@@ -1,0 +1,6 @@
+We have endineness:
+Big endian and Little endian
+MBS first      LBS first
+
+0xA1B2C3D4     0xA1B2C3D4
+A1|B2|C3|D4    D4|C3|B2|A1

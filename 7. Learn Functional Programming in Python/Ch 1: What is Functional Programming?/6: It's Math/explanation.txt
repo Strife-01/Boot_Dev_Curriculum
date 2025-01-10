@@ -1,0 +1,30 @@
+Functional programming tends to be more popular amongst us mathematicions 
+avg = Σx/N
+
+To put this calculation in plain English:
+
+    Σ is just the Greek letter Sigma, and it represents "the sum of a collection".
+    x is the collection of numbers we're averaging.
+    N is the number of elements in the collection.
+    avg is equal to the sum of all the numbers in collection "x" divided by the number of elements in collection "x".
+
+
+Imperative:
+def get_average(nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total / len(nums)
+
+Declarative:
+def get_average(nums):
+    return sum(nums) / len(nums)
+
+
+In information technology and computer science, a system is described as stateful if it is designed to remember preceding events or user interactions;[1] the remembered information is called the state of the system.
+
+The set of states a system can occupy is known as its state space.
+
+We don't keep track of the state of the variables in functional. In Imperative we do OOP.
+
+

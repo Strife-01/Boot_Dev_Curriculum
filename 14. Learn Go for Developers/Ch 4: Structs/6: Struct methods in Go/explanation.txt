@@ -1,0 +1,26 @@
+In go we can attach reciver functions to any data types created with type
+they can be structs or other types we declare
+and we can create interfaces that our structs can implement and these will be attached to our receivers
+receivers by convention are a variable of type type created that we name with the first letter of the type (just convention)
+
+
+type rect struct {
+  width int
+  height int
+}
+
+// area has a receiver of (r rect)
+// rect is the struct
+// r is the placeholder
+func (r rect) area() int {
+  return r.width * r.height
+}
+
+var r = rect{
+  width: 5,
+  height: 10,
+}
+
+fmt.Println(r.area())
+// prints 50
+

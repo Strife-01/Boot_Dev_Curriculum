@@ -1,0 +1,16 @@
+CLI
+Command Line
+Command Prompt
+Shell
+Terminal
+
+
+GUI
+
+
+echo "Hello World"
+
+best line ever:
+How to open a terminal on Linux
+
+If you're on Linux, I refuse to believe that you don't already know how.

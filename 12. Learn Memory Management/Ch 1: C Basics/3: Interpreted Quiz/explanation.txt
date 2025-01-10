@@ -1,0 +1,1 @@
+in an interpreted language we have to run the code top to bottom and then if we use an undeclared function or variable it will crash just when it meets it in the code

@@ -1,0 +1,17 @@
+The .intersection() method calculates the intersection of two sets.
+set() & set()
+
+https://docs.python.org/3/library/stdtypes.html#frozenset.intersection
+
+https://docs.python.org/3/tutorial/datastructures.html#sets
+
+a = {x for x in 'abracadabra' if x not in 'abc'}
+
+a
+{'r', 'd'}
+
+
+[x for x in y if z ...] - list comprehension
+
+myDict = { k:v for (k,v) in zip(keys, values)} - dict comprehension
+

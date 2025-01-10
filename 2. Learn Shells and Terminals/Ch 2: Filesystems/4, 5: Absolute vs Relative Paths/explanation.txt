@@ -1,0 +1,2 @@
+an absoulte path is from the root directory
+a relative path is from where we currently are to the file/ directory we require

@@ -1,0 +1,6 @@
+map[string]map[string]int
+map[rune]map[string]int
+map[int]map[string]map[string]int
+
+
+maps can contain nested maps and so on which can be perfect for json in combination with structs

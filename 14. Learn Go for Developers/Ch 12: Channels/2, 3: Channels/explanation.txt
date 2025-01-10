@@ -1,0 +1,22 @@
+channels are thread-safe, typed queues that allow goroutines(threads) to communicate with eachother
+
+we create them by using the make function
+
+ch := make(chan int) - chan keyword
+
+ch <- 69 - this assigns the data to a channel in the FIFO manner in the direction of the arrow
+
+the operation is blocking until there is a goroutine to receive the value
+
+v := <-ch - receive data from a channel
+this is going to remove the data from the channel and store it into the variable
+the operation is blocking until there is a value in the channel to be read
+
+
+a deadlock is when there are all of the goroutines blocking so none can continue
+
+
+if we don't care about what is passed in the channel we can use an empty struct: struct{} because we only care when and if something is passed into the channel
+
+
+<-ch - we can use this notation to block the execution until something is passed into the channel - this will not store the value

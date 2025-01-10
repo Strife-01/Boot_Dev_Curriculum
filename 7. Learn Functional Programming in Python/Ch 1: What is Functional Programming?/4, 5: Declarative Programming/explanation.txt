@@ -1,0 +1,24 @@
+Functional programming aims to be declarative, we describe what we want our program to do Instead of how to do it.
+
+Let's take an extreme example and pretend we wanted to style a webpage with CSS (Obviously a hypothetical because, well, why would anyone want to work on the frontend???)
+Declarative styling
+
+The following CSS changes all button elements to have red text:
+
+button {
+    color: red;
+}
+
+It does not execute line-by-line like an imperative language. Instead, it simply declares the desired style, and it's up to a web browser to figure out how to apply and display it.
+Imperative styling
+
+Unlike functional programming (and CSS), a lot of code is imperative. We write out the exact step-by-step implementation details. This Python script draws a red button on a screen using the Tkinter library:
+
+from tkinter import * # first, import the library
+master = Tk() # create a window
+master.geometry("200x100") # set the window size
+button = Button(master, text="Submit", fg="red").pack() # create a button
+master.mainloop() # start the event loop
+
+
+when we do Declarative programming we encapsulate implementation details somewhere else so that we get a more functional Declarative implementation.

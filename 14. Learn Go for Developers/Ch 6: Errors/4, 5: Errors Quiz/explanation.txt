@@ -1,0 +1,3 @@
+go expresses errors by any type that implements the error interface and is basically an error type
+
+in go we can handle errors however we want it is not like in Python or JS or Java. 

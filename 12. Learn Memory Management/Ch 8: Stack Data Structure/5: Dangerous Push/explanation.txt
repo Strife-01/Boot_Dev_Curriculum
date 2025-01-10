@@ -1,0 +1,3 @@
+void * pointers are heterogeneous which means they can store anything
+it can store anything, even values that aren't pointers. this means that void * can hold both int * and int just as well. Bad idea but possible idea.
+

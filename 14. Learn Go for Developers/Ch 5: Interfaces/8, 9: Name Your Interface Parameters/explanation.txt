@@ -1,0 +1,9 @@
+In go interfaces we can name the parameters and the return types
+
+type Copier interface {
+  Copy(string, string) int
+}
+
+type Copier interface {
+  Copy(sourceFile string, destinationFile string) (bytesCopied int)
+}

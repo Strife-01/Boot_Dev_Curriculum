@@ -1,0 +1,24 @@
+if the same header gets included more than once than we can get circular dependencies errors which are nasty
+
+#pragma - this is a compiler settings preprocessor directives
+
+#pragma once will tell the compiler to only include the file once even if we include it in multiple files
+
+// my_header.h
+
+#pragma once
+
+struct Point {
+    int x;
+    int y;
+};
+
+other way to guard against circular dependencies is the preprocessor directives header guards
+
+#ifndef MY_HEADER_H
+#define MY_HEADER_H
+
+// some cool code
+// add all the header code here and if the header macro was not defined yet it will run the code inside this header guard, else it will not
+
+#endif

@@ -1,0 +1,5 @@
+if we allocate too much stack data or we run a reccursion too many times we will run into a stack overflow
+
+buffer overflow
+
+we get segfault which is a flag raised by the hw if it has memory corruption checks in place which is sent to the Operating System to kill the process

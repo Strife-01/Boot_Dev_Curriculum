@@ -1,0 +1,21 @@
+x + y;
+x - y;
+x * y;
+x / y;
+x % y;
++=, -=, *=, /=
+x++; // += 1
+x--; // -= 1
+
+int a = 5;
+int b = a++; // b is assigned 5, then a becomes 6
+
+int a = 5;
+int b = ++a; // a becomes 6, then b is assigned 6
+
+Sneklang is unique™ in that its toolchain gives developers a "project score" that's dependent on how maintainable and "high quality" their codebase is. The larger the score, the harder it is to work in the project. The score is calculated as follows:
+
+    Multiply the number of files by the number of commits to get the size factor
+    Add the size factor to the number of contributors to get the complexity factor
+    Multiply the complexity factor by the average bug criticality (a number between 0 and 1) to get the final score
+

@@ -1,0 +1,29 @@
+slices reference arrays
+
+func (f *File) Read(buf []byte) (n int, err error)
+
+the slices are pointers to the underlying arrays and we can pass them but when we do that we pass a pointer to the underlying array
+
+In go both arrays and slices are passed by value
+
+BUT slices are a descryptor which contains the address of the underlying array and the length of the slice and the capacity of the slice
+even though we pass by value, because the slice contains the address of the underlying array the modification of the slice is going to be
+reflected everywher
+
+for arrays we need pointers
+
+length is the number of elements in the slice at any given moment
+the capacity is the number of elements in the underlying array from the index where the slice starts
+pointer to the first element of the slice in the underlying array
+
+slices are basically arraylists in java - but not exactly
+
+when we want to grow our slices we don't want to override something that might be after the bounds of our slice in the underlying array
+we allocate a new place in memory and then we copy everything inside the new array that we need so the initial array remains intact
+and we get our grown array
+the garbage collector will remove it if needed
+
+
+multiple slices can point to the same array
+
+a function with access to a slice can modify the underlying array

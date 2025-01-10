@@ -1,0 +1,2 @@
+rm some_file.txt
+rm -r some_directory

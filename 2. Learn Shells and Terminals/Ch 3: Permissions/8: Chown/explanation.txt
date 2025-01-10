@@ -1,0 +1,9 @@
+sudo chown -R root contacts
+change owner requires root privileges 
+
+    sudo - Run as the root user
+    chown - Command to change the owner
+    -R - "Recursive", meaning also apply the changes to everything inside the directory
+    root - The name of the new owner
+    contacts - The directory to change the owner of
+

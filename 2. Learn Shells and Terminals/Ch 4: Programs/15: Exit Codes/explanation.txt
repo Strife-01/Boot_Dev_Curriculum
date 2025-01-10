@@ -1,0 +1,14 @@
+Exit codes (sometimes called "return codes" or "status codes") are how programs communicate back whether they ran successfully or not.
+
+the ? variable will hold the exit status
+we use them to communicate the state of programs and if we have programs that are used in other programs we use them
+
+code 0 success rest error
+
+ls ~
+echo $?
+# 0
+
+ls /does/not/exist
+echo $?
+# 1

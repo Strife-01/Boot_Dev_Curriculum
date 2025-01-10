@@ -1,0 +1,3 @@
+WSL will install a terminal, linux os and filesystem on your pc
+Powershell is dogshit
+

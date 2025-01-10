@@ -1,0 +1,8 @@
+for the stack we will use the Array List for the purpose of make the stack bigger whenever count == capacity
+  Count 	Capacity 	Data
+0 	4 	[-, -, -, -]
+1 	4 	[1, -, -, -]
+2 	4 	[1, 2, -, -]
+3 	4 	[1, 2, 3, -]
+4 	4 	[1, 2, 3, 4]
+5 	8 	[1, 2, 3, 4, 5, -, -, -]

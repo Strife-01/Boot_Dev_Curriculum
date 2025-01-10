@@ -1,0 +1,1 @@
+it is called mutex, wrote mu because it is mutual exclusive, i.e. different threads or goroutines cannot access them at the same time 

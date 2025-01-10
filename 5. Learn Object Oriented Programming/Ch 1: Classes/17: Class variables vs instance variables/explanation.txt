@@ -1,0 +1,50 @@
+ Instance variables
+
+Instance variables vary from object to object and are declared in the constructor.
+
+
+class Wall:
+    def __init__(self):
+        self.height = 10
+
+south_wall = Wall()
+south_wall.height = 20 # only updates this instance of a wall
+print(south_wall.height)
+# prints "20"
+
+north_wall = Wall()
+print(north_wall.height)
+# prints "10"
+
+
+ Class variables
+
+Class variables remain the same between instances of the same class and are declared at the top level of a class definition.
+
+
+In python. In java we declare class variables as static and the instance variables without but we declare them on the top level
+
+class Wall:
+    height = 10
+
+south_wall = Wall()
+print(south_wall.height)
+# prints "10"
+
+Wall.height = 20 # updates all instances of a Wall
+
+print(south_wall.height)
+# prints "20"
+
+
+ Variables, fields and properties
+
+The terms instance and class variable, field, property and attribute are used interchangeably and usually refer to the same concept in languages that support some form of object-oriented programming. Here's a quick reference for some popular languages:
+Language 	Class variable 	Instance variable
+Python 	Class variable 	Instance variable
+Go 	Field 	Field
+JavaScript 	Property 	Property
+C# 	Static field 	Field
+Java 	Static field 	Field
+
+usually stay away from class variables cause then you need to keep track of who manages and mutates them.

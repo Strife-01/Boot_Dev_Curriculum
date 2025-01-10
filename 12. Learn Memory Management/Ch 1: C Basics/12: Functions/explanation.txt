@@ -1,0 +1,15 @@
+float add(int x, int y) {
+    return (float)(x + y);
+}
+The first type, float is the return type.
+add is the name of the function.
+int x, int y are the arguments to the function, and their types are specified.
+x + y adds the two arguments together.
+(float) casts the result to a float.
+
+int main() {
+    float result = add(10, 5);
+    printf("result: %f\n", result);
+    // result: 15.000000
+    return 0;
+}

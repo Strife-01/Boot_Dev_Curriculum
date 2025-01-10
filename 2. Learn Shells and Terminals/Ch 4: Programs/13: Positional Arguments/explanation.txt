@@ -1,0 +1,4 @@
+in shell commands can take CLA
+
+mv file1 file2 
+

@@ -1,0 +1,1 @@
+Methods in parent classes often use pass to signal they should be overridden in child classes. To override, create a method with the same name in the child class.

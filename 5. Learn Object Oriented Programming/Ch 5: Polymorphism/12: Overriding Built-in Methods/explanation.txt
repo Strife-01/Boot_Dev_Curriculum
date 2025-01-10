@@ -1,0 +1,33 @@
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+p1 = Point(4, 5)
+print(p1)
+# prints "<Point object at 0xa0acf8>"
+
+
+That's not super useful! Let's teach instances of our Point object to print themselves. The __str__ method (short for "string") lets us do just that. It takes no inputs but returns a string that will be printed to the console when someone passes an instance of the class to Python's print() function.
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f"({self.x},{self.y})"
+
+p1 = Point(4, 5)
+print(p1)
+# prints "(4,5)"
+
+Note: the __repr__ method works in a similar way, you'll see it from time to time
+
+Called by the repr() built-in function to compute the “official” string representation of an object. If at all possible, this should look like a valid Python expression that could be used to recreate an object with the same value (given an appropriate environment). If this is not possible, a string of the form <...some useful description...> should be returned. The return value must be a string object. If a class defines __repr__() but not __str__(), then __repr__() is also used when an “informal” string representation of instances of that class is required.
+
+This is typically used for debugging, so it is important that the representation is information-rich and unambiguous. A default implementation is provided by the object class itself.
+
+
+https://docs.python.org/3/reference/datamodel.html#object.__repr__

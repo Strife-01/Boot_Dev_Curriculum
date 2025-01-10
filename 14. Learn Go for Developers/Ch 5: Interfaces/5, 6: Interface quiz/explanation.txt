@@ -1,0 +1,7 @@
+Go:
+type shape interface {
+  area() float64
+}
+
+JAVA:
+class Circle implements Shape

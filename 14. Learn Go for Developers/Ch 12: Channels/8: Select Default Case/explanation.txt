@@ -1,0 +1,38 @@
+the default keyword in the select will stop select from blocking and it will execute immediately if no other channel fires
+
+select {
+case v := <-ch:
+    // use v
+default:
+    // receiving from ch would block
+    // so do something else
+}
+
+
+
+Tickers
+these are time standard library functions
+
+time.Tick() returns a channel that sends a value on a given interval - non stop
+time.After() sends a value once after a given time has passed
+time.Sleep() will block the calling goroutine until the time passes
+
+
+We can have channels readonly or writeonly
+func main() {
+    ch := make(chan int)
+    readCh(ch)
+}
+
+func readCh(ch <-chan int) { - here we force cast it to a read only channel
+    // ch can only be read from
+    // in this function
+}
+
+
+func writeCh(ch chan<- int) { - here we force cast it to a write only channel
+    // ch can only be written to
+    // in this function
+}
+
+time.Sleep(500 * time.Millisecond) - use time.Millisecond for time.Sleep

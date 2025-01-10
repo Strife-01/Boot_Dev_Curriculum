@@ -1,0 +1,29 @@
+struct City {
+  char *name;
+  int lat;
+  int lon;
+};
+
+int main() {
+  struct City c = {0};
+} - this sets all the fields to their 0 value
+
+
+
+int main() {
+  struct City c = {"San Francisco", 37, -122};
+} - positional initializer
+
+
+
+int main() {
+  struct City c = {
+    .name = "San Francisco",
+    .lat = 37,
+    .lon = -122
+  }; - designated initializer because c.name, c.lat, c.long is how you access the values
+}
+
+struct City c;
+c.lat = 41; // Set the latitude
+printf("Latitude: %d", c.lat); // Print the latitude

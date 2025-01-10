@@ -1,0 +1,24 @@
+classes are very useful when we define methods:
+class Soldier:
+    health = 5
+
+    def take_damage(self, damage):
+        self.health -= damage
+
+soldier_one = Soldier()
+soldier_one.take_damage(2)
+print(soldier_one.health)
+# prints "3"
+
+behaviour that acts on the objects's state:
+there are static or class methods
+and normal methods
+
+objects are reference types that live on the heap and the need to be referenced
+in Python we reference the current object with the self keyword
+
+my_object.my_method()
+
+also it is the first parameter to any method
+
+

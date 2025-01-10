@@ -1,0 +1,40 @@
+type shape interface {
+  area() float64
+  perimeter() float64
+}
+
+type rect struct {
+    width, height float64
+}
+func (r rect) area() float64 {
+    return r.width * r.height
+}
+func (r rect) perimeter() float64 {
+    return 2*r.width + 2*r.height
+}
+
+type circle struct {
+    radius float64
+}
+func (c circle) area() float64 {
+    return math.Pi * c.radius * c.radius
+}
+func (c circle) perimeter() float64 {
+    return 2 * math.Pi * c.radius
+}
+
+
+an interface is a collection of function signatures and we can use them for creating different types of objects that implement these funcitons
+
+when we use the types direcly we have them with their methods but when we pass them to a function we can pass the type of the interface as 
+all the types that implement those methods in the interface are of the interface type so we have our code more modular
+
+func printShapeData(s shape) {
+	fmt.Printf("Index: %v - Area: %v - Perimeter: %v\n", i, s.area(), s.perimeter())
+}
+
+we also have the empty interface type
+interface{}
+and any type implements the empty interface type.
+
+Interfaces allow you to focus on what a type does rather than how it's built. They can help you write more flexible and reusable code by defining behaviors (like methods) that different types can share. This makes it easy to swap out or update parts of your code without changing everything else.

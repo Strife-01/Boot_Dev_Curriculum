@@ -1,0 +1,1 @@
+history command will show the history of your commands 

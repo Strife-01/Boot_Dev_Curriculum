@@ -1,0 +1,5 @@
+in go we can omit any of the phases
+
+for INITIAL; ; AFTER {
+  // do something forever
+}

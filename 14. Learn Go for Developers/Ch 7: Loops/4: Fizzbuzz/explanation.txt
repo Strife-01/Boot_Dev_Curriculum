@@ -1,0 +1,2 @@
+go has the % operator but it doesn't act like Python on negatives
+also we have && ||

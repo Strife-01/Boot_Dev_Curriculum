@@ -1,0 +1,6 @@
+Stack
+Push pop
+
+Generics in C void *
+
+

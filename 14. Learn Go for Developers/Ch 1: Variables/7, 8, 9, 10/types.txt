@@ -1,0 +1,32 @@
+go pearks:
+  compiled - very fast compilation time
+
+slower than other compiled languages
+faster than non compiled languages
+
+types:
+int:
+  int, int8, int16, int32, int64
+
+uint:
+  uint, uint8, uint16, uint32, uint64, uintptr
+
+float:
+  float32, float64
+
+complex:
+  complex64, complex128
+
+truncation/ type casting in go we type cast with type(value)
+
+
+defaults:
+    bool
+    string
+    int
+    uint
+    byte
+    rune
+    float64
+    complex128
+stray from these only when you need every last bit of performance

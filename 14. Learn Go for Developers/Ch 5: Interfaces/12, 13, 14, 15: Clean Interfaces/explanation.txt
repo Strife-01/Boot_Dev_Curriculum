@@ -1,0 +1,45 @@
+1. keep the interfaces small
+http package example
+type File interface {
+    io.Closer
+    io.Reader
+    io.Seeker
+    Readdir(count int) ([]os.FileInfo, error)
+    Stat() (os.FileInfo, error)
+}
+
+2. Interfaces should have no knowledge about the types that are implementing them
+they should be the behaviour that a type that represents them should implement
+also we can use interface embedding
+    sub-interface
+
+type car interface {
+	Color() string // good
+	Speed() int // good
+	IsFiretruck() bool // bad antypattern as it forces out types 
+}
+
+
+type firetruck interface {
+	car
+	HoseLength() int
+}
+
+
+We should use type assertion to test whether an interface type is represented by a certain type
+
+
+3. Interfaces are not classes
+
+    Interfaces are not classes, they are slimmer.
+    Interfaces don’t have constructors or deconstructors that require that data is created or destroyed.
+    Interfaces aren’t hierarchical by nature, though there is syntactic sugar to create interfaces that happen to be supersets of other interfaces.
+    Interfaces define function signatures, but not underlying behavior. Making an interface often won’t DRY up your code in regards to struct methods. For example, if five types satisfy the error interface, they all need their own version of the Error() function.
+
+
+The empty interface might be used for map[string]interface{} to work with JSON data
+But we can use anonymous structs which are undeclared structs.
+
+You can have interfaces on pointers
+
+The interface will return nil if there is not a type that we pass and that does not implement it

@@ -1,0 +1,14 @@
+sizeof will tell how much memeory something takes
+
+structs are contiguous places in memeory
+
+typedef struct Human{
+    char first_inital;
+    int age;
+    double height;
+} human_t;
+
+
+because cpus need to have an allignment when they read memory from structs we need to have some padding in case the field takes less that the required space per field in the specific architecture or compiler.
+
+usually the layout needs to be 4 bytes so in our case we will have 1 byte padding of 3 bytes int 4 bytes and then double 8 bytes

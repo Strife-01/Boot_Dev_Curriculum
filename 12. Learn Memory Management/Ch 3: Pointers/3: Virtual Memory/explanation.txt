@@ -1,0 +1,29 @@
+the code doesn't have direct access to the RAM. It uses an abstraction called Virtual Memory to get memory from the Physical Memory using the Operating System.
+
+Operating System manages the access to the Physical Memory amongst a lot of other things.
+
+When the program runs, it becomes a process and it gets memory from the Operating System.
+
+In an embedded device where you don't have an OS, you will interact with the Physical Memory directly.
+
+Unless you build an OS for embedded devices.
+
+When we take memory from the OS we get our own Virtual Memory Space
+There is also a key value pairs data structure that has the virtual memory pointing to the physical memeory address in the RAM
+
+because of this we get:
+
+Memory Isolation - we keep processes from accessing memory from other processes.
+
+Security - Block processes from accessing certain parts of Memory
+
+Simplicity - devs don't have to worry about mapping memory to physical addresses and make sure they don't touch other processes.
+
+Performance - the os can optimize tasks like moving data from memory to disk and so on
+
+
+Memory is just a huge array of data where the address is the index.
+
+
+
+So most likely the memory addresses in the code that we use are not the same as the ones on the hardware because we get access to a virtual memory space from the Operating System, but, if we are working with embedded devices, then we might just have access to the physical memeory directly as we don't have an os to manage it for us.

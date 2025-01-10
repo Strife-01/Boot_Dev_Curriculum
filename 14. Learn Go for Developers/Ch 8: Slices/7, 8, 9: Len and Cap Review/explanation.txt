@@ -1,0 +1,21 @@
+if we append something to a slice, if the size exceeds the cap we reallocate or if we would step on other data we still reallocate
+
+  func Append(slice, data []byte) []byte {
+    l := len(slice)
+    if l + len(data) > cap(slice) {  // reallocate
+        // Allocate double what's needed, for future growth.
+        newSlice := make([]byte, (l+len(data))*2)
+        // The copy function is predeclared and works for any slice type.
+        copy(newSlice, slice)
+        slice = newSlice
+    }
+    slice = slice[0:l+len(data)]
+    copy(slice[l:], data) // this copies the data from l onwards
+    return slice
+}
+
+
+len or cap of nil slice is 0 as a nil slice is a pointer that doesn't point to any underlying array
+
+append(slice, data...) will return the new slice pointer if the slice is reallocated or the same pointer if not
+copy(slice, data) will copy the data in the specified location

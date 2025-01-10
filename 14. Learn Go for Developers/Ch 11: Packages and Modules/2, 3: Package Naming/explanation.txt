@@ -1,0 +1,12 @@
+by convention the packages are named as the last package in their relative path
+ex
+import math/rand will have files with the first line package rand
+these files are in the same directory - that directory is the package
+
+all the files in a package must be in the same directory otherwise there will be an error
+
+package math and this contains package rand
+
+the names are not required to match their import path but it is discorraged for consistency
+
+a directory of go has at most 1 package and all .go files in the same directory must belong to the same package

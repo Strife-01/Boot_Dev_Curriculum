@@ -1,0 +1,103 @@
+While inheritance is the most unique trait of object-oriented languages, polymorphism is probably the most powerful. Polymorphism is the ability of a variable, function or object to take on multiple forms.
+
+    "poly"="many"
+    "morph"="form".
+
+For example, classes in the same hierarchical tree may have methods with the same name but different behaviors.
+
+
+Method Overriding - same signature different implementation - in compiled languages this happens at runtime
+Method Overloading - same name different signature - in compiled languages this happens at compile time
+Operator Overloading - changing the meaning of an Operator like +, *, / 
+
+Overriding: Common in many OOP languages (e.g., Java, Python, C++).
+Overloading: Common in statically typed languages (e.g., Java, C++). Python achieves similar functionality through default parameters and variable-length arguments.
+
+
+Python Operator Overloading:
+
+ __invert__(self): For the ~ operator.
+
+    String Representation:
+        __str__(self): For the str() function and print statements.
+        __repr__(self): For the repr() function and interactive interpreter.Common Special Methods for Operator Overloading
+
+Here are some commonly used special methods for operator overloading in Python:
+
+    Arithmetic Operators:
+        __add__(self, other): For the + operator.
+        __sub__(self, other): For the - operator.
+        __mul__(self, other): For the * operator.
+        __truediv__(self, other): For the / operator.
+        __floordiv__(self, other): For the // operator.
+        __mod__(self, other): For the % operator.
+        __pow__(self, other): For the ** operator.
+
+    Comparison Operators:
+        __eq__(self, other): For the == operator.
+        __ne__(self, other): For the != operator.
+        __lt__(self, other): For the < operator.
+        __le__(self, other): For the <= operator.
+        __gt__(self, other): For the > operator.
+        __ge__(self, other): For the >= operator.
+
+    Unary Operators:
+        __neg__(self): For the unary - operator.
+        __pos__(self): For the unary + operator.
+        __abs__(self): For the abs() function.
+       
+
+
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+
+    def __sub__(self, other):
+        return Vector(self.x - other.x, self.y - other.y)
+
+    def __mul__(self, scalar):
+        return Vector(self.x * scalar, self.y * scalar)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __str__(self):
+        return f"Vector({self.x}, {self.y})"
+
+# Usage
+v1 = Vector(2, 3)
+v2 = Vector(4, 5)
+
+print(v1 + v2)  # Output: Vector(6, 8)
+print(v1 - v2)  # Output: Vector(-2, -2)
+print(v1 * 3)   # Output: Vector(6, 9)
+print(v1 == v2) # Output: False
+
+
+
+
+
+
+class Creature():
+    def move(self):
+        print("the creature moves")
+
+class Dragon(Creature):
+    def move(self):
+        print("the dragon flies")
+
+class Kraken(Creature):
+    def move(self):
+        print("the kraken swims")
+
+for creature in [Creature(), Dragon(), Kraken()]:
+    creature.move()
+# prints:
+# the creature moves
+# the dragon flies
+# the kraken swims
+

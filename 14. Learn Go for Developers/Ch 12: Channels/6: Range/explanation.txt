@@ -1,0 +1,6 @@
+for item := range ch {
+    // item is the next value received from the channel
+}
+
+this operation is blocking at every read if nothing is there and it will close only when the channel is closed
+

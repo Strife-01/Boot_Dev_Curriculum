@@ -1,0 +1,10 @@
+int *pointer_to_something; // declares pointer as a pointer to an int
+
+int meaning_of_life = 42;
+int *pointer_to_mol = &meaning_of_life;
+// pointer_to_mol now holds the address of meaning_of_life
+
+int meaning_of_life = 42;
+int *pointer_to_mol = &meaning_of_life;
+int value_at_pointer = *pointer_to_mol;
+// value_at_pointer = 42

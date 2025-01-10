@@ -1,0 +1,10 @@
+
+    int - An integer
+    float - A floating point number
+    char - A character
+    char * - An array of characters (more on this later... if you think about it, sounds kinda like a string doesn't it?)
+long
+unsigned
+short
+double
+

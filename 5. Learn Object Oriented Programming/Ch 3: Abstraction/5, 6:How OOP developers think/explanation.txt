@@ -1,0 +1,11 @@
+Classes in object-oriented programming are all about grouping data and behavior together in one place: an object. Object-oriented programmers tend to think about programming as a modeling problem. They think:
+
+    "How can I write a Human class that holds the data and simulates the behavior of a real human?"
+
+To provide some contrast, functional programmers tend to think of their code as inputs and outputs, and how those inputs and outputs transition the world from one state to the next:
+
+    "When a human takes a step, what's the new state of the game?"
+
+oop is self referential while FP is about never mutating states but alwais creating a new state
+
+

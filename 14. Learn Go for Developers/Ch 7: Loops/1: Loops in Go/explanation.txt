@@ -1,0 +1,4 @@
+we have for loops
+for INITIAL; CONDITION; AFTER{
+  // do something
+}

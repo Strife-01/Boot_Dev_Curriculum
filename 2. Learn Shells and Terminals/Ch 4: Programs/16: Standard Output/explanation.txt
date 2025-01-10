@@ -1,0 +1,13 @@
+standard output, stdout, standard out is a stream of data where the terminal prints
+
+print("Hello world")
+# Hello world
+
+echo "Hello world"
+# Hello world
+
+fmt.Println("Hello world")
+
+printf("hello world");
+
+all print to stdout

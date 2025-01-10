@@ -1,0 +1,22 @@
+Pointers are great for referencing and optimization.
+
+python
+class Coordinate:
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+def update_coordinate_x(coord, new_x):
+    coord.x = new_x
+
+c = Coordinate(1, 2, 3)
+print(c.x)  # 1
+update_coordinate_x(c, 4)
+print(c.x)  # 4
+
+
+we get passing by value and passing by reference.
+
+structs are passed by value
+we need to pass them by reference if we want to change them 

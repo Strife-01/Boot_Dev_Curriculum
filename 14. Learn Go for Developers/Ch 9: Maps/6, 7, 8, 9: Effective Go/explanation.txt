@@ -1,0 +1,44 @@
+var timeZone = map[string]int{
+    "UTC":  0*60*60,
+    "EST": -5*60*60,
+    "CST": -6*60*60,
+    "MST": -7*60*60,
+    "PST": -8*60*60,
+}
+
+
+maps are reference type
+passing them like slices will mutate the underlying data structure
+
+attended := map[string]bool{
+    "Ann": true,
+    "Joe": true,
+    ...
+}
+
+if attended[person] { // will be false if person is not in the map
+    fmt.Println(person, "was at the meeting")
+}
+
+fetching a non existend key will result in a zero value of the type of the value
+
+var seconds int
+var ok bool
+seconds, ok = timeZone[tz]
+
+
+this is called the “comma ok” idiom
+
+func offset(tz string) int {
+    if seconds, ok := timeZone[tz]; ok {
+        return seconds
+    }
+    log.Println("unknown time zone:", tz)
+    return 0
+}
+
+
+delete(timeZone, "PDT")  // Now on Standard Time // i think the way it works is it places the removes the pointer from the value in the 
+underlying data structure and then it deallocates the value from data.
+
+the values are overriden for the keys 

@@ -1,0 +1,39 @@
+the values in the arguments are copied in the stack frame in the place of the arguments allocation
+
+stack - we know the size ahead of time and they need to live in the sights of 1 function
+heap - size is unknown ahead of time and the return value is not limited to one function
+
+the heap is a pool of memory that is shared across the entire application 
+
+the stack is allocated and deallocated based on the function calls meanwhile the heap is allocated and deallocated at will whenever needed. the heap is also called dynamic memory
+
+int *new_int_array(int size) {
+  int *new_arr = (int*)malloc(size * sizeof(int)); // Allocate memory
+  if (new_arr == NULL) {
+    fprintf(stderr, "Memory allocation failed\n");
+    exit(1); // Exit if allocation fails
+  }
+  return new_arr;
+}
+
+Because the size of the array isn't known at compile time, we can't put it on the stack. Instead, we allocate memory on the heap using the <stdlib.h>'s malloc function. It takes a number of bytes to allocate as an argument (size * sizeof(int)) and returns a pointer to the allocated memory (a void * that we cast to an int*).
+
+on the stack we will have the pointer to that pool of memory
+
+int* arr_of_6 = new_int_array(6);
+arr_of_6[0] = 69;
+arr_of_6[1] = 42;
+arr_of_6[2] = 420;
+arr_of_6[3] = 1337;
+arr_of_6[4] = 7;
+arr_of_6[5] = 0;
+
+pointer on the stack
+data on the heap 
+
+When we're done with the memory, we need to manually deallocate it using the <stdlib.h>'s free function
+
+free(arr_of_6);
+
+
+after deallocation we basically signal to the OS and the compiler that the data is no longer reserved. the pointer still exist but it is now "dangling pointer" and it should not be used.

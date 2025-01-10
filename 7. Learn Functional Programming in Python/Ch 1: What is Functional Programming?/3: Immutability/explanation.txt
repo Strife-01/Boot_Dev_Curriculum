@@ -1,0 +1,25 @@
+In FP, we strive to make data immutable. Once a value is created, it cannot be changed. Mutable data, on the other hand, can be changed after it's created.
+
+In Haskell every piece of data is immutable unless we use monads
+
+Generally speaking, immutability means fewer bugs and more maintainable code.
+
+Tuples and lists are both ordered collections of values, but tuples are immutable and lists are mutable.
+
+You can append to a list, but you can not append to a tuple. You can create a new copy of a tuple using values from an existing tuple, but you can't change the existing tuple.
+Lists are mutable
+
+ages = [16, 21, 30]
+# 'ages' is being changed in place
+ages.append(80)
+# [16, 21, 30, 80]
+
+Tuples are immutable
+
+ages = (16, 21, 30)
+more_ages = (80,) # note the comma! It's required for a single-element tuple
+# 'all_ages' is a brand new tuple
+all_ages = ages + more_ages
+# (16, 21, 30, 80)
+
+

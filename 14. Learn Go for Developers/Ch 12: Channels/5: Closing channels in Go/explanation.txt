@@ -1,0 +1,15 @@
+ch := make(chan int)
+
+// do some stuff with the channel
+
+close(ch)
+
+
+v, ok := <-ch
+if ok is false than the channel is closed and empty
+
+don't send data to a closed channel or the main goroutine will crash
+open not used goroutines will be garbage collected
+
+a panic in the main goroutine will cause the whole program to crash
+a panic in the other goroutines will cause those to crash

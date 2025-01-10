@@ -1,0 +1,25 @@
+An interface type list will allow us to create an interface which lists only the types we want to have
+
+
+// ~ specifies that we can use any underlying type that is defined for the type we specify
+// Ordered is a type constraint that matches any ordered type.
+// An ordered type is one that supports the <, <=, >, and >= operators.
+type Ordered interface {
+    ~int | ~int8 | ~int16 | ~int32 | ~int64 |
+        ~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr |
+        ~float32 | ~float64 |
+        ~string
+}
+
+& (AND): Sets each bit to 1 if both bits are 1.
+| (OR): Sets each bit to 1 if at least one of the bits is 1.
+^ (XOR for two operands, NOT for one operand): Sets each bit to 1 if only one of the bits is 1 (XOR) or inverts each bit (NOT).
+&^ (AND NOT): Clears each bit of the first operand if the corresponding bit of the second operand is set.
+<< (left shift): Shifts bits to the left, filling with zeros.
+>> (right shift): Shifts bits to the right, filling with zeros.
+
+
+0x0 hex
+0b0 binary
+0o0 octal
+no prfix decimal

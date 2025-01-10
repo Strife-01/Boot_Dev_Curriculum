@@ -1,0 +1,23 @@
+struct Pastry {
+    char *name;
+    float weight;
+};
+
+turned into 
+
+typedef struct Pastry {
+    char *name;
+    float weight;
+} pastry_t;
+
+
+pastry_t is just a convention for the declared types 
+we start struct names with capital as convention for Object creators like Classes
+
+
+typedef struct {
+    char *name;
+    float weight;
+} pastry_t;
+
+it is good to give the struct a name and to always use the typedeffed one because you might want to use the struct you created inside of it like a node for example

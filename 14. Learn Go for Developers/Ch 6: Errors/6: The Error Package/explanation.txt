@@ -1,0 +1,4 @@
+in go we have an errors package which has a few methods for an errors struct that implements the error interface and add a few methods
+that allows us to work easier with the error
+
+var err error = errors.New("error text")

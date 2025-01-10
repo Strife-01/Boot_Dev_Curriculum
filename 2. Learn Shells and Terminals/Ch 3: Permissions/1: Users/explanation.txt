@@ -1,0 +1,2 @@
+use sudo if you are in a sudo group to be able to run commands with at most privilege
+whoami

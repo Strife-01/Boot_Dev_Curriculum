@@ -1,0 +1,13 @@
+sizeof will work on enum
+
+if the value of the enum exeeds the int, the compiler will use long or unsigned int to accomodate that value
+
+  Enums are often used to represent the possibilities in a set. For example:
+
+    SMALL = 0
+    MEDIUM = 1
+    LARGE = 2
+    EXTRA_LARGE = 3
+
+
+Remember that %zu is the format specifier for size_t

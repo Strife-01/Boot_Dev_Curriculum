@@ -1,0 +1,18 @@
+A pointer is a variable that stores the memory address of another variable. This means that a pointer "points to" the location of where the data is stored NOT the actual data itself.
+
+
+The * syntax defines a pointer:
+var p *int
+
+
+The & operator generates a pointer to its operand.
+myString := "hello"
+myStringPtr := &myString
+
+
+* is also a dereference
+& is a referenc
+
+x := 5
+y := x - this gets a copy of the value x
+y := &x will get the address of x and *y will allow us to modify the x value but the address of y will still be a different value but the values is the address of the x

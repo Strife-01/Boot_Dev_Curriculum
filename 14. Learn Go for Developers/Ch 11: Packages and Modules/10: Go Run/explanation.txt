@@ -1,0 +1,1 @@
+the go run quickly compiles and runs the code - it is good for testing the code

@@ -1,0 +1,14 @@
+if (x > 3) {
+    printf("x is greater than 3\n");
+}
+
+
+if (x > 3) {
+    printf("x is greater than 3\n");
+} else if (x == 3) {
+    printf("x is 3\n");
+} else {
+    printf("x is less than 3\n");
+}
+
+if (x > 3) printf("x is greater than 3\n");

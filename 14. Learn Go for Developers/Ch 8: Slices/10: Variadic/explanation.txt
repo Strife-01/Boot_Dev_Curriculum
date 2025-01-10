@@ -1,0 +1,36 @@
+in go, functions can take a variable number of arguments which will be put in a slice with the ... operaor
+
+this is called a variadic argument and it denotes a variadic function
+
+func concat(strs ...string) string {
+    final := ""
+    // strs is just a slice of strings
+    for i := 0; i < len(strs); i++ {
+        final += strs[i]
+    }
+    return final
+}
+
+func main() {
+    final := concat("Hello ", "there ", "friend!")
+    fmt.Println(final)
+    // Output: Hello there friend!
+}
+
+
+func Println(a ...interface{}) (n int, err error)
+
+
+the spread operator will allow us to pass a slice into a variadic function or any function that takes a number of arguments of a certain type
+if the len or the slice is equal to the number of argument required or not necessary with the variadic operator
+
+func printStrings(strings ...string) { // variadic operator
+	for i := 0; i < len(strings); i++ {
+		fmt.Println(strings[i])
+	}
+}
+
+func main() {
+    names := []string{"bob", "sue", "alice"}
+    printStrings(names...) // spread operator
+}

@@ -1,0 +1,8 @@
+at the top of any script we can specify the interpretor that will run the program.
+
+#! interpreter [optional-arg]
+
+this is called the shebang
+
+ex:
+#!/usr/bin/python3

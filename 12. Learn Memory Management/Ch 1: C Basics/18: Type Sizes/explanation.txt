@@ -1,0 +1,7 @@
+sizeof() -- tells you the size of the data type
+
+size of data type in C is architecture specific
+
+char usually 1 byte
+int, float 4 bytes
+long, double 8 bytes

@@ -1,0 +1,8 @@
+shells are optimized for running small programs and make different programs interact with eachother not for writing huge ones
+
+create a variable
+name="Lane"
+
+use a variable - we need the $ which points to the value stored in the variable and returns it
+echo $name
+# Lane

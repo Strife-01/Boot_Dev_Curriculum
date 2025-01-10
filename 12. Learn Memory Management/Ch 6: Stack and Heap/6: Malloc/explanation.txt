@@ -1,0 +1,29 @@
+The malloc function (memory allocation) is a standard library function in C that allocates a specified number of bytes of memory on the heap and returns a pointer to the allocated memory.
+
+This new memory is uninitialized, which means:
+
+    It contains whatever data was previously at that location.
+    It is the programmer's responsibility to ensure that the allocated memory is properly initialized and eventually freed using free to avoid memory leaks.
+
+If you want to make sure that the memory is properly initialized, you can use the calloc function, which allocates the specified number of bytes of memory on the heap and returns a pointer to the allocated memory. This memory is initialized to zero (meaning it contains all zeroes).
+
+void* malloc(size_t size);
+
+    size: The number of bytes to allocate.
+    Returns: A pointer to the allocated memory or NULL if the allocation fails.
+
+
+// Allocates memory for an array of 4 integers
+int *ptr = malloc(4 * sizeof(int));
+if (ptr == NULL) {
+  // Handle memory allocation failure
+  printf("Memory allocation failed\n");
+  exit(1);
+}
+// use the memory here
+// ...
+free(ptr);
+
+
+if we do not deallocate the memory the operating system will at the end of the program but this is not a good idea.
+

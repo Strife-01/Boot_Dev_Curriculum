@@ -1,0 +1,12 @@
+to format a string:
+
+
+s := fmt.Sprintf("I am %v years old", 10)
+// I am 10 years old
+
+s := fmt.Sprintf("I am %v years old", "way too many")
+// I am way too many years old
+
+%v value
+%s string
+%f %.2f float64

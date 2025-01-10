@@ -1,0 +1,21 @@
+maps are key->value pairs - mathematical representation of maps
+
+the zero value is nil
+
+make()
+
+ages := make(map[string]int)
+ages["John"] = 37
+ages["Mary"] = 24
+ages["Mary"] = 21 // overwrites 24
+
+ages = map[string]int{
+  "John": 37,
+  "Mary": 21,
+}
+
+ages = map[string]int{
+  "John": 37,
+  "Mary": 21,
+}
+fmt.Println(len(ages)) // 2

@@ -1,0 +1,18 @@
+coordinate_t point = {10, 20, 30};
+printf("X: %d\n", point.x);
+
+
+coordinate_t point = {10, 20, 30};
+coordinate_t *ptrToPoint = &point;
+printf("X: %d\n", ptrToPoint->x);
+
+
+coordinate_t point = {10, 20, 30};
+coordinate_t *ptrToPoint = &point;
+printf("X: %d\n", (*ptrToPoint).x);
+
+
+*str.val this will dereference the val field of struct str and if it is not a pointer field than it will throw an error
+
+
+. has higher precedence than *

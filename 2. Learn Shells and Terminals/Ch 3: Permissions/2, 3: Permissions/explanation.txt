@@ -1,0 +1,17 @@
+drwxrwxrwx permissions for owner, group, other
+
+r read
+w write
+x execute
+
+- file
+d directory
+
+owner - usually who created the file but it can be changed
+group - files/directories in unix like systems can be assigned to a single group
+others - everyone else
+
+the numbers 777 are for owner, group, others and they represent binary for the 3 positions
+
+7 = 111 which is r w x
+

@@ -1,0 +1,21 @@
+memory addresses on the stack are always changing and getting reused.
+
+the stack is only safe to use within the context of the current function!
+
+main.c:12:11: warning: address of stack memory associated with local variable 'c' returned [-Wreturn-stack-address]
+   12 |   return &c;
+      |           ^
+1 warning generated.
+
+coord_t *new_coord(int x, int y) {
+  coord_t c;
+  c.x = x;
+  c.y = y;
+  return &c;
+}
+
+here the problem is that we deallocate the stack frame so the data can be rewritten by the next stack function call. This happens because we return the address of a variable that was created in the function we called and we return its address instead of its value which will change when we override it 
+
+Because we're accessing stack memory (the pointer created on line 12) outside of the function that created it, the memory has been deallocated and is no longer safe to use. Technically the behavior is undefined, but it's likely that in this specific scenario you're just seeing it get overwritten by the next function call (thus 50 and 60 always print).
+
+we will just return a copy of the struct so we don't lose the data 

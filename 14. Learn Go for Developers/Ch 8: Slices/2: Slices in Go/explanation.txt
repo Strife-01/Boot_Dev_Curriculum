@@ -1,0 +1,17 @@
+slices are dinamically sized cause it has an underlying array behind it
+the zero value of a slice is nil
+
+arrayname[lowIndex:highIndex]
+arrayname[lowIndex:]
+arrayname[:highIndex]
+arrayname[:]
+
+lowIndex inclusive
+highIndex exclusive
+
+
+primes := [6]int{2, 3, 5, 7, 11, 13}
+mySlice := primes[1:4]
+// mySlice = {3, 5, 7}
+
+make a slice from an array

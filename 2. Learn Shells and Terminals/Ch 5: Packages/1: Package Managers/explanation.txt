@@ -1,0 +1,15 @@
+A package manager is a software tool that helps you install other software. Its primary functions include:
+
+    Downloading software from official sources
+    Installing software
+    Updating software
+    Removing software
+    Managing dependencies
+
+As a developer, you'll frequently use package managers to get access to the software you need to get your work done.
+
+
+Pacman
+Brew
+Apt
+Nix

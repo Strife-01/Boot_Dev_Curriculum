@@ -1,0 +1,2 @@
+we never declare that a type implemets a specific interface
+if that type implements the methods of the interface than it authomatically will be of that interface type

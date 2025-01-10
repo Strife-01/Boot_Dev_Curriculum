@@ -1,0 +1,4 @@
+ls -l
+chmod -R u=rwx,g=,o= DIRECTORY
+the user has full permissins, the rest have none
+

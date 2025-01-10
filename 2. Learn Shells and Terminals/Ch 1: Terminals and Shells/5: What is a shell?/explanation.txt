@@ -1,0 +1,43 @@
+we can create authomations for our shell by either creating shell scripts or by creating shell functions which can be treated as individual scripts when we source the shell script that contains them. They can also be used for other stuff like normal functuions in shell
+
+this happens cause if we run a shell script, it will run in a subshell and then it will get back to our shell
+if we want to run a shell script in the current shell, we need to source it
+or we can run functions from it 
+
+https://www.geeksforgeeks.org/bash-script-define-bash-variables-and-its-types/
+
+Functions take positional arguments and have no parameters we access the arguments in order with $1 , $2 .. etc 
+$@ is an array of all the functions arguments
+$* is a string of all parameters added together
+
+${myArray[@]} - is an array in shell 
+
+$# is length of a value or number of arguments passed to a script
+$? is the exit status of last program
+$$ is the PID of the shell currently running
+
+{#arrayName[@]} - length of the array 
+
+arrayName=(element1 element2 element3 element4) 
+
+{#arrayName[index]}
+
+{arrayName[index]}
+
+declare -A newArray=([key1]=value1 [key2]=value2 [key3]=value3) - maps or associative array
+${!newArray[@]} or ${!newArray[*]} - keys 
+${newArray[@]} or ${newArray[*]} for values 
+
+a shell is a program that also does the commands and renders the outputs of them on the screen
+
+Shells are REPL
+
+Read - the command 
+Eval (Evaluate) - the command by usually calling other programs
+Print - the result of the commands
+Loop - give the user another prompt
+
+expr
+bc
+
+set /a - windows

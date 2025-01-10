@@ -1,0 +1,12 @@
+We can still use them even if we have named return values
+func getCoords() (x, y int){
+  return x, y // this is explicit
+}
+
+func getCoords() (x, y int){
+  return 5, 6 // this is explicit, x and y are NOT returned
+}
+
+func getCoords() (x, y int){
+  return // implicitly returns x and y
+}

@@ -1,0 +1,5 @@
+Of the four pillars of OOP, inheritance is the only one that doesn't fit with functional programming.
+
+Inheritance isn't seen in functional code due to the mutable classes that come along with it. Encapsulation, polymorphism and abstraction are still used all the time in functional programming.
+
+When working in a language that supports ideas from both FP and OOP (like Python, JavaScript, or Go) the best developers are the ones who can use the best ideas from both paradigms effectively and appropriately.

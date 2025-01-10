@@ -1,0 +1,18 @@
+arrays are not just pointers, they hold the memory address but they are the whole array, hold data for the whole array
+
+BUT the decay to pointers in some contexts - i.e. they become just pointers and they will only hold data for the first element of the array
+
+int arr[5];
+int *ptr = arr;          // 'arr' decays to 'int*'
+int value = *(arr + 2);  // 'arr' decays to 'int*'
+they also decay to pointers when we pass them to functions
+this is why you can't pass an array to a function as a value and you pass by reference
+
+
+sizeof will return the size of the whole array (when is not decayed) not just the size of a pointer.
+
+&arr will return an address to the whole array, if that array is in fact an array and not just a pointer, it will be an array type eg: int (*)[5];  pointer for an int array with 5 elements
+
+Initialization: when an array is allocated and initialized it will fully allocate the whole space and not just the pointer
+
+format specifier z is for size_t

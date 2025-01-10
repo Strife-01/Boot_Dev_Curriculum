@@ -1,0 +1,19 @@
+int main() {
+    return 0;
+}
+
+main - entry point function of the program
+int - return type of the function
+0 - here cause we return from the main function, this is the exit code from the program
+{} - block
+; - terminates the statement
+
+the \n flushes the buffer in the browser
+
+#include <stdio.h> - standard input output library
+printf - print formatted
+
+
+the gnu c compiler gcc
+
+gcc -o final_file source_file.c

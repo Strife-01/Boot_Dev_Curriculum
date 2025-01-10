@@ -1,0 +1,16 @@
+Frankly, Python is not the best language for functional programming. Reasons include:
+
+    No static typing.
+    Everything is mutable.
+    No tail call optimization.
+    Side effects are common.
+    Imperative and OOP styles abound in popular libraries.
+    Purity is not enforced (and sometimes not even encouraged).
+    Sum Types are hard to define.
+    Pattern matching is weak at best.
+
+functional languages:
+    Haskell
+    OCaml
+    Elixir
+

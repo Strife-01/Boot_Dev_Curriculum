@@ -1,0 +1,32 @@
+INNITIALIZED CHANNEL BUT UNUSED IS nil
+
+var s []int       // s is nil
+var c chan string // c is nil
+
+var s = make([]int, 5) // s is initialized and not nil
+var c = make(chan int) // c is initialized and not nil
+
+
+SEND TO A nil CHANNEL BLOCKS FOREVER
+
+var c chan string        // c is nil
+c <- "let's get started" // blocks
+
+
+A RECEIVE FROM A nil CHANNEL BLOCKS FOREVER
+var c chan string // c is nil
+fmt.Println(<-c)  // blocks
+
+
+A SEND TO A CLOSED CHANNEL WILL PANIC
+var c = make(chan int, 100)
+close(c)
+c <- 1 // panic: send on closed channel
+
+
+A RECEIVE FROM A CLOSED CHANNEL WILL IMMEDIATELY RETURN THE zero value
+this is why we use v, ok := <-ch
+
+var c = make(chan int, 100)
+close(c)
+fmt.Println(<-c) // 0

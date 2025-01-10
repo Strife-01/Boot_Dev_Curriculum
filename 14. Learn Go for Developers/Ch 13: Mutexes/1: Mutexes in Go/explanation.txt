@@ -1,0 +1,20 @@
+in order to avoid race conditions we will use mutaxes which allow us to lock certain operations so that they are mutually exclusive as in just 1 goroutine can access it at the same time
+this way we syncronize the data
+
+
+mu     *sync.Mutex - this is a mutaxe 
+func protected(){
+    mu.Lock() - here we lock the mutax so that only one goroutine can access it, i.e the calling goroutine
+    defer mu.Unlock() - we defer the unlock to the end of the function,if we forget to unlock we get a deadlock
+    // the rest of the function is protected
+    // any other calls to `mu.Lock()` will block
+}
+
+
+maps are not thread-safe, if there are multiple goroutines that are accessing it at the same time we must use a mutex so that we don't introduce race conditions
+
+mutexes are a type of lock called mutual exclusive
+
+
+** if we use WASM - web assembly - that is single threaded so it will be thread safe, but running the code on a local machine will most likely be multithreaded
+

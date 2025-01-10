@@ -1,0 +1,3 @@
+munit is lightweight unit test framework for C
+.h the function prototypes, defines, etc
+.c is the implementation code

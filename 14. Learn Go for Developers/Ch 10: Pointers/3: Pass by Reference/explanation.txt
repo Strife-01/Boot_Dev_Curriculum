@@ -1,0 +1,31 @@
+Pass by value
+func increment(x int) {
+    x++
+    fmt.Println(x)
+    // 6
+}
+
+func main() {
+    x := 5
+    increment(x)
+    fmt.Println(x)
+    // 5
+}
+
+Pass by reference
+func increment(x *int) {
+    *x++
+    fmt.Println(*x)
+    // 6
+}
+
+func main() {
+    x := 5
+    increment(&x)
+    fmt.Println(x)
+    // 6
+}
+
+in go to access a struct by pointer:
+msgTotal := analytics.MessagesTotal
+which is shorthand for (*analytics).MessagesTotal

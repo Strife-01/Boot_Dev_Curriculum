@@ -1,0 +1,28 @@
+maps values can be anything but the keys need to be of comparable type
+boolean, numeric, string, pointer, channel, and interface types, and structs or arrays
+
+slices, maps, and functions; these types cannot be compared using ==, and may not be used as map keys
+
+hits := make(map[string]map[string]int)
+
+n := hits["/doc/"]["au"]
+
+func add(m map[string]map[string]int, path, country string) {
+    mm, ok := m[path]
+    if !ok {
+        mm = make(map[string]int)
+        m[path] = mm
+    }
+    mm[country]++
+}
+add(hits, "/doc/", "au")
+
+much better and cleaner,
+type Key struct {
+    Path, Country string
+}
+hits := make(map[Key]int)
+
+hits[Key{"/", "vn"}]++
+
+n := hits[Key{"/ref/spec", "ch"}]

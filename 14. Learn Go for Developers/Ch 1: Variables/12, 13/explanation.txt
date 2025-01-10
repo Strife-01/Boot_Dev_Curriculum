@@ -1,0 +1,14 @@
+Interpreted:
+Python
+Ruby
+JS
+PHP
+
+VM:
+Java
+C#
+
+Compiled:
+Rust
+C++
+Go - go runtime makes it perform more like a VM languaged but it uses much less memory

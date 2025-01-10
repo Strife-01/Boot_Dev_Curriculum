@@ -1,0 +1,19 @@
+class Soldier:
+    health = 5
+
+    def take_damage(self, damage, multiplier):
+        damage = damage * multiplier
+        self.health -= damage
+
+dalinar = Soldier()
+damage, multiplier = 30, 3
+
+# Only "damage" and "multiplier" are passed as arguments
+# "dalinar" is passed implicitly as the first argument, "self"
+dalinar.take_damage(damage, multiplier)
+
+
+methods are functions but tied to the class (type itself)
+
+helm_of_mordune.enchant(mana, power)
+helm_of_mordune will be passed into the self paramenter of the method

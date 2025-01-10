@@ -1,0 +1,6 @@
+less - one line or page at a time
+more - one page at a time
+
+less -N - show line numbers
+space_bar goes down a page
+b goes up a page

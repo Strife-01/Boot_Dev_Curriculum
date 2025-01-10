@@ -1,0 +1,29 @@
+# Defines a new class called "Soldier"
+class Soldier:
+    health = 5
+    armor = 3
+    damage = 2
+
+
+a class stores other values inside from metadata and state in fields and also functionality
+
+a class defines a custom type
+health = 50
+# health is an instance of an integer type
+aragorn = Soldier()
+# aragorn is an instance of the Soldier type (class)
+
+"Classes" are custom new types that we define as the programmer. Each new instance of a class is an "object".
+
+
+class Archer:
+    health = 40
+    arrows = 10
+
+# Create several instances of the Archer class
+legolas = Archer()
+bard = Archer()
+
+# Print class properties
+print(legolas.health) # 40
+print(bard.arrows) # 10

@@ -1,0 +1,5 @@
+find some_directory -name hello.txt
+# Find all filenames that contain the word "chad"
+find some_directory -name "*chad*"
+
+* wildcard

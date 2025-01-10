@@ -1,0 +1,18 @@
+FP is a programming paradigm that falls under the declarative part,
+while OOP is an imperative paradigm where we focus on mutating state, in functional paradigm where we want to preserve states and create functions which return data instead of mutating state
+
+Functional programming is more about declaring what you want to happen, rather than how you want it to happen.
+Imperative (or procedural) programming declares both the what and the how
+
+Imperative code:
+car = create_car()
+car.add_gas(10)
+car.clean_windows()
+
+Functional
+return clean_windows(add_gas(create_car()))
+the state of the car is never mutated
+
+In this course, we're working on "Doc2Doc", a command line tool for converting documents from one format to another. If you're familiar with Pandoc, the idea is similar
+
+

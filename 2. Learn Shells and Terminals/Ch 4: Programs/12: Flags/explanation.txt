@@ -1,0 +1,10 @@
+flags are options for commands
+
+convention:
+-c
+--multicharacters
+
+if a flag has 1 character we use - else if there are multiple characters we use --
+
+-h or --help and sometimes we have both versions
+

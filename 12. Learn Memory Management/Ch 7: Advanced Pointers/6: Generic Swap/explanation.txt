@@ -1,0 +1,13 @@
+void swap(void *vp1, void *vp2, size_t size);
+
+we will create a swap function that acts on any type of data 
+because we need the size we will provide it
+
+void *memcpy(void *destination, void* source, size_t size);
+
+we will use memcpy that copies the data from source to destination and it copies exactly size bytes 
+the function doesn't care about the data types underneeth the hood cause it copies binary directly into the memory space of the destination
+
+we will interpret data later on by force casting the void pointer into a pointer that we need 
+
+Defined in header <string.h>

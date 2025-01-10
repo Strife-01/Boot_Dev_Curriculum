@@ -1,0 +1,1 @@
+the go build compiles all the files into a statically linked binary (if some executable linkes this executable it becomes part of the caller executable - because it is statically linked, the callers don't need the go toolchain to run the code, they can just copy it or we can directly ship it to production)

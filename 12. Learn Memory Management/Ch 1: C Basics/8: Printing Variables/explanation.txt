@@ -1,0 +1,13 @@
+in C to print string interpolations like in python:
+print(f"Hello, {name}. You're {age} years old.")
+
+we need to do it like this: - formatting the strings with format specifiers
+printf("Hello, %s. You're %d years old.\n", name, age);
+
+common format specifiers:
+    %d - digit (integer)
+    %c - character
+    %f - floating point number
+    %s - string (char *)
+
+\n - newline character

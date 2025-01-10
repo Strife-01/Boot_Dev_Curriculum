@@ -1,0 +1,13 @@
+PATH environment variable knows where all your paths for executables are and when we try to run a command without a path, it looks it up in all the directories in the path or the files in it
+
+you can set it with export PATH=$PATH"..."
+or '...' but '' doesn't allow content substitution
+the paths are separated by :
+
+PATH='test'
+
+add="add"
+
+PATH=$PATH:$add
+
+echo $PATH

@@ -1,0 +1,5 @@
+mv some_file.txt some_other_name.txt - renaming
+mv some_file.txt some_directory/some_file.txt - move the contents to another location
+mv some_file.txt ../some_file.txt - move a file up
+mv some_file.txt some_directory/ - move without renaming
+cannot move the current working directory

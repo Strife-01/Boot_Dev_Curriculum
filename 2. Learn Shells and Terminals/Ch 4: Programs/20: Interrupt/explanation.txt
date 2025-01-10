@@ -1,0 +1,2 @@
+ctrl + c sends a SIGINT to the program manager and that kills the process
+

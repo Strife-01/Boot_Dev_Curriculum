@@ -1,0 +1,2 @@
+a type implements an interface in go implicitely it doesn't have an implements keyword
+we can have types implement multiple interfaces and not knowing that

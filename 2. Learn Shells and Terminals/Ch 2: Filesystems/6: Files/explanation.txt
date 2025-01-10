@@ -1,0 +1,6 @@
+# Print the contents of a file to the terminal
+cat file1.txt
+
+
+# Concatenate the contents of multiple files and print them to the terminal
+cat file1.txt file2.txt

@@ -1,0 +1,34 @@
+enum keyword for the enumerator type 
+
+typedef enum DaysOfWeek {
+  MONDAY,
+  TACO_TUESDAY,
+  WEDNESDAY,
+  THURSDAY,
+  FRIDAY,
+  SATURDAY,
+  FUNDAY,
+} days_of_week_t;
+
+it is like struct, so we use typedef to save words 
+
+it will start incrementing from the point where it has numbers 
+enum Foo { A, B, C = 10, D, E = 1, F, G = F + C };
+// A=0, B=1, C=10, D=11, E=1, F=2, G=12
+
+typedef struct Event {
+  char *title;
+  days_of_week_t day;
+} event_t;
+
+// Or if you don't want to use the alias:
+
+typedef struct Event {
+  char *title;
+  enum DaysOfWeek day;
+} event_t;
+
+
+An enum is not a collection type like a struct or an array. It's just a list of integers constrained to a new type, where each is given an explicit name.
+
+When we use enums, when whe choose the value it collapses into that value so it will take just the integer space in memory - they are just integers - we can also make arrays of them

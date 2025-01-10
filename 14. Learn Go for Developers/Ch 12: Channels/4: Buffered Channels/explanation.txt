@@ -1,0 +1,7 @@
+channels can be buffered 
+ch := make(chan channel_type, buffer_length)
+now the operation of writing will block just when the buffer is full
+and the reading will block just when the buffer is empty
+
+
+the main thread(goroutine) can also read or write data to a channel

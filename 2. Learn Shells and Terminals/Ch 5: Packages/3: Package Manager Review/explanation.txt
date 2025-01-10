@@ -1,0 +1,10 @@
+When you type a command like apt install neovim, the package manager will:
+
+    Check to see if the package is already installed.
+    If it's not installed, it will download the package from a repository.
+    It will install the package on your computer.
+    It will install any dependencies that the package needs to run.
+    It will (hopefully) add the package to your PATH if it should be there.
+
+
+which nvim

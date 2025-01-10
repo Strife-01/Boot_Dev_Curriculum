@@ -1,0 +1,25 @@
+defer will push the code that it has to the end of the function right before return out of function
+it will be evaluated immediately but it will be executed right at the end
+very good to close resources that are no longer used like database closing
+
+func GetUsername(dstName, srcName string) (username string, err error) {
+	// Open a connection to a database
+	conn, _ := db.Open(srcName)
+
+	// Close the connection *anywhere* the GetUsername function returns
+	defer conn.Close()
+
+	username, err = db.FetchUser()
+	if err != nil {
+		// The defer statement is auto-executed if we return here
+		return "", err
+	}
+
+	// The defer statement is auto-executed if we return here
+	return username, nil
+}
+
+// here
+return "", err
+// or here
+return username, nil

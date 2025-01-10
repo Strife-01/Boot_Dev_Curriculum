@@ -1,0 +1,6 @@
+shells have configuration files that run before a shell session starts.
+this is what will set up the functions, environment variables and aliases. Also customization and etc
+
+the files with .filename are hidden files
+the config file is .shellnamerc
+

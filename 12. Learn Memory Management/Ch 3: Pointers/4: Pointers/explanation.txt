@@ -1,0 +1,12 @@
+int age = 37;
+int *pointer_to_age = &age;
+
+
+int x = 5;
+int y = x;
+
+here y gets a copy of x so they have different addresses
+
+int *x_ptr = &x;
+
+this will get the value as the address of x but it also has an address so we can go like this forever. ******...

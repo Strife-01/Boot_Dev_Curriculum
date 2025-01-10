@@ -1,0 +1,28 @@
+different directories (which in Go are different packages by definition)
+
+Use Encapsulation from OOP: - expose data via API
+package classifier
+
+// ClassifyImage classifies images as "hotdog" or "not hotdog"
+func ClassifyImage(image []byte) (imageType string) {
+	if hasHotdogColors(image) && hasHotdogShape(image) {
+		return "hotdog"
+	} else {
+		return "not hotdog"
+	}
+}
+
+func hasHotdogShape(image []byte) bool {
+	// internal logic that the application doesn't need to know about
+	return true
+}
+
+func hasHotdogColors(image []byte) bool {
+	// internal logic that the application doesn't need to know about
+	return true
+}
+
+1. Hide internal logic
+2. Don’t change APIs - keep the function signatures
+3. Don’t export functions from the main package - A main package isn't a library, there's no need to export functions from it.
+4. Packages shouldn't know about dependents - make packages generic

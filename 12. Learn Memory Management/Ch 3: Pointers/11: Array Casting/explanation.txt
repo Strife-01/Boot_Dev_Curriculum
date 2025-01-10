@@ -1,0 +1,35 @@
+this is a real psychopaty
+
+coordinate_t points[3] = {
+  {5, 4, 1},
+  {7, 3, 2},
+  {9, 6, 8}
+};
+
+this is an array of structs which only contains one element type, in this case a struct 
+because this array is bassically a pointer to the firts element, we can create an array of deconstructed elements by force casting the array to a pointer of the type of the fields
+
+int *array_of_ints = (int *)points;
+
+and then iterate over
+
+for (int i = 0; i < 9; i++) {
+  printf("points_start[%d] = %d\n", i, points_start[i]);
+}
+/*
+points_start[0] = 5
+points_start[1] = 4
+points_start[2] = 1
+points_start[3] = 7
+points_start[4] = 3
+points_start[5] = 2
+points_start[6] = 9
+points_start[7] = 6
+points_start[8] = 8
+*/
+
+
+sizeof is not a function, it is a keyword, it can use () but if we have an expression inside
+
+when we pass an array to a function as argument in C we are actually passing the pointer to the first element so sizeof(array) / sizeof(array[0]) will not work cause we are counting the size of the first element instead of the size of the array
+

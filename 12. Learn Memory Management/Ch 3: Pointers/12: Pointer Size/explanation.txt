@@ -1,0 +1,31 @@
+pointer size is determined by the architecture and not by the data it points to
+usually 8 bytes but it can differ
+
+in C, pointers are just memory addresses so they always have the same size
+
+int *intPtr;
+char *charPtr;
+double *doublePtr;
+printf("Size of int pointer: %zu bytes\n", sizeof(intPtr));
+printf("Size of char pointer: %zu bytes\n", sizeof(charPtr));
+printf("Size of double pointer: %zu bytes\n", sizeof(doublePtr));
+// Size of int pointer: 4 bytes
+// Size of char pointer: 4 bytes
+// Size of double pointer: 4 bytes
+
+
+int intArray[10];
+char charArray[10];
+double doubleArray[10];
+printf("Size of int array: %zu bytes\n", sizeof(intArray));
+printf("Size of char array: %zu bytes\n", sizeof(charArray));
+printf("Size of double array: %zu bytes\n", sizeof(doubleArray));
+// Size of int array: 40 bytes
+// Size of char array: 10 bytes
+// Size of double array: 80 bytes
+
+if we use WASM we will have pointes of 4bytes but tipically a machine have it as 8 bytes 
+
+sizeof carries data of the array as the length of it, it being a contiguous place in memory. But when passing the array it can get the issue with the sizeof returning the length of the value at the first element in the array 
+
+

@@ -1,0 +1,2 @@
+cp source_file.txt destination/
+cp -R my_dir new_dir

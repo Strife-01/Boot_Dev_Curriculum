@@ -1,0 +1,9 @@
+
+    You will have many git repositories on your machine (typically one per project).
+    Each repository contains one or more packages
+    Each repository is typically a single module.
+    Each package consists of one or more Go source files in a single directory.
+
+The path to a package's directory determines its import path and where it can be downloaded from if you decide to host it on a remote version control system like GitHub or GitLab.
+
+avoid working in the $GOPATH/src directory

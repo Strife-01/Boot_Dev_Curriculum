@@ -1,0 +1,26 @@
+Before even thinking about using pointers to optimize your code, use pointers when you need a shared reference to a value; otherwise, just use values.
+
+
+in heap we have:
+structurs
+pointers with the new(type) keyword
+slices
+maps
+channels
+interfaces
+function literals
+
+
+x := new(int) - this will return a pointer to an int value - this is allocated on the heap
+
+
+we allocate stuff un the heap when we need to have reference types in order to have better performance
+
+on the stack we copy values but the stack is usually more performant than the heap even if it has copying - copying can be a problem in cases where we have very big data structures
+
+
+The slice itself is a small struct containing a pointer to an array, its length, and its capacity.
+
+If the slice or its underlying array is used in a way that requires it to persist beyond the scope of the function, the underlying array will be heap-allocated.
+
+values to which pointers point usually stored in Go in heap

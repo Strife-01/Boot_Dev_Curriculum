@@ -1,0 +1,6 @@
+Through inheritance the inheriting class will inherit everything, is languages like Java, they will not inherit private stuff, only protected and public, but still, in python they will inherit everything as python uses conventions not strict rules
+
+if you only want to share some data, you should better create a class that will contain all the data and behaviour that is common and inherit that in all the classes that need that behaviour
+the whole behaviour
+
+

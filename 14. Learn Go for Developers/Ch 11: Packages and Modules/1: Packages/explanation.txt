@@ -1,0 +1,4 @@
+every go program has packages
+the main package contains the main() function
+
+the rest are library packages

@@ -1,0 +1,10 @@
+an environment variable is a variable which is available for all the programs that the shell is running
+
+env command will show you all the environment variables
+export will create an environment variable 
+
+export name=value
+
+usually we have the name capitallizes by convention and the variables are ephemeral, they are not persistent after you stop the shell session unless they are in the config file
+
+

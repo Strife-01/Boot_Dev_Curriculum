@@ -1,0 +1,21 @@
+stdin is the stream of data where programs read the input from
+when we send an input to the computer this is places in the stdin where the programs read it from.
+
+# execution stops until the user types
+# something (in this case "Lane") and presses enter
+name = input("What is your name? ")
+
+print("Hello,", name)
+# Hello, Lane!
+
+
+curl
+
+
+in shell we use read variable command which will read from stdin into the variable variable
+
+https://phoenixnap.com/kb/bash-read
+
+we can use it with piping with delimiters etc
+
+read <options> <arguments>

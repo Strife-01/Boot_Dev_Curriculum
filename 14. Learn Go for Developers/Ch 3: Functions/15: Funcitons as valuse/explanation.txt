@@ -1,0 +1,10 @@
+in go every function is a first class function and a higher order function
+we can have a function assigned to a variable and that variable is going to be of function type
+but we can also provide a function as an argument to another function and call it inside the function
+
+
+func aggregate(a, b, c int, arithmetic func(int, int) int) int {
+  firstResult := arithmetic(a, b)
+  secondResult := arithmetic(firstResult, c)
+  return secondResult
+}

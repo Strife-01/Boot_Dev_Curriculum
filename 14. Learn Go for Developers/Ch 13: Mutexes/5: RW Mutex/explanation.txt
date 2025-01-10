@@ -1,0 +1,13 @@
+the standard library also has sync.RWMutex
+
+this is much more performant for reading as it posses the possibility to have:
+
+RLock()
+RUnlock()
+
+in this case only one thread can have a Lock but there are as many as we need that can have a RLock as they can read
+
+in RLock all of them can read
+if we have Lock then we cannot RLock as we could get wrong values and only one thread can have access to this Lock at the same time
+
+also if we have RLock writing is blocked 

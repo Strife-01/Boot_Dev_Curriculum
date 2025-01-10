@@ -1,0 +1,5 @@
+if you can't close a program with the sigint you sould kill the process behind it
+
+kill PID will kill the process with the process id specified
+
+ps aux will print the processes that are currently running 

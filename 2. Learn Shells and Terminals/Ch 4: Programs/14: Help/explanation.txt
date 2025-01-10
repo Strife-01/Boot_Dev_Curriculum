@@ -1,0 +1,5 @@
+
+    --help (flag)
+    -h (flag)
+    help (first positional argument)
+

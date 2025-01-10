@@ -1,0 +1,6 @@
+char *my_string = "hello world";
+snek_object_t *obj = new_snek_string(input); - this is how the functions are used
+
+for strings we need to allocate additional storage.
+
+

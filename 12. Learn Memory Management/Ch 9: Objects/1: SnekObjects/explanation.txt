@@ -1,0 +1,9 @@
+Make objects:
+
+high level data structures with data and metadata:
+- data type: int, char, etc
+- size of the data it holds
+- data itself
+- how many references to itself - needed for the GC
+
+

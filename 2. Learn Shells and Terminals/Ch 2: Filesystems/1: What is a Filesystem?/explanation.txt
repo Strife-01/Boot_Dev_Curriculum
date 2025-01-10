@@ -1,0 +1,7 @@
+a directory or folder is a container for files
+files are collections of bits which can represent anything
+
+in linux and mac and usually in every good os we have a filesystem tree
+we begin with the root directory and go down from there
+
+pwd - print working directory

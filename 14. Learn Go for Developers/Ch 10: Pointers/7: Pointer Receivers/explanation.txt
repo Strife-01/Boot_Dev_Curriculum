@@ -1,0 +1,42 @@
+pointer receiver
+
+type car struct {
+	color string
+}
+
+func (c *car) setColor(color string) {
+	c.color = color
+}
+
+func main() {
+	c := car{
+		color: "white",
+	}
+	c.setColor("blue")
+	fmt.Println(c.color)
+	// prints "blue"
+}
+
+
+non pointer receiver
+
+type car struct {
+	color string
+}
+
+func (c car) setColor(color string) {
+	c.color = color
+}
+
+func main() {
+	c := car{
+		color: "white",
+	}
+	c.setColor("blue")
+	fmt.Println(c.color)
+	// prints "white"
+}
+
+
+a pointer receiver allows the method to modify the values of the underlying type value instead of making a copy of it
+it is very common 

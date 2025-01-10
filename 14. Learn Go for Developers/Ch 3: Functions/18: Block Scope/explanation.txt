@@ -1,0 +1,25 @@
+go is not like python function scoped
+go is block scoped and we can use non attached scopes
+package main
+
+func main() {
+    {
+        age := 19
+        // this is okay
+        fmt.Println(age)
+    }
+
+    // this is not okay
+    // the age variable is out of scope
+    fmt.Println(age)
+}
+
+Blocks are defined by curly braces {}. New blocks are created for:
+
+    Functions
+    Loops
+    If statements
+    Switch statements
+    Select statements
+    Explicit blocks
+

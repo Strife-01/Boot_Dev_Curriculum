@@ -1,0 +1,29 @@
+
+    Return the same result if given the same arguments. They are deterministic.
+    Do not change the external state of the program. For example, they do not change any variables outside of their scope.
+    Do not perform any I/O operations (like reading from disk, accessing the internet, or writing to the console).
+
+Example 1 - pure
+
+def multiply_by2(nums):
+    products = []
+    for num in nums:
+        products.append(num*2)
+    return products
+
+Example 2 - impure
+
+balance = 1000
+cars = []
+
+def buy_car(new_car):
+    cars.append(new_car)
+    balance -= 69
+
+Example 3 - impure
+
+import random
+
+def roll_die(num_sides):
+    return random.randint(1, num_sides)
+

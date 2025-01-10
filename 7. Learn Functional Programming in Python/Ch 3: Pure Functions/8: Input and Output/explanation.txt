@@ -1,0 +1,8 @@
+In functional programming, i/o is viewed as dirty but necessary. We know we can't eliminate i/o from our code, so we just contain it as much as possible. There should be a clear place in your project that does nasty i/o stuff, and the rest of your code can be pure.
+
+For example, a Python program might:
+
+    Read a file from the hard drive as the program starts
+    Run a bunch of pure functions to analyze the data
+    Write the results of the analysis to a file on the hard drive at the end
+

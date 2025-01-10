@@ -1,0 +1,4 @@
+Encapsulation is about organization, not security.
+Encapsulation doesn't make data secure.
+
+Encapsulation is like folders in an unlocked filing cabinet. They don't stop someone from peeking inside, but they do keep everything tidy and easy to find.

@@ -1,0 +1,7 @@
+Files with a .sh extension are shell scripts.
+mydir/program.sh
+./program.sh
+we need the prefix for the shell script unless we have the path to the directory where it is located in the PATH environment variable
+
+if we use chmod without a specifier for the target we will add or remove the permission for all of the u g o
+unless we use the numbers

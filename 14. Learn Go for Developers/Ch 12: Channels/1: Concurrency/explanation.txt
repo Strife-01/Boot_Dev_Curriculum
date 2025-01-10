@@ -1,0 +1,32 @@
+paralellism is a concurrency model
+
+sequentiall is not the same as syncorous
+
+concurrency
+mutithreading
+parallelism 
+
+CPU: ins/section
+
+we have more CPUs (cores) - each with their instructions per second
+
+sequentiall
+------->------->
+parallel
+------->
+------->
+
+
+there is a difference between parallelism, asyncronous and mutlythreading, and time switching
+
+parallelism means at the same time
+mutlythreading means using multiple threads to do individual tasks but they can work asyncronous or parallel depending on the hw - a thread is a process or a worker that is doing something and the operating system is managing
+time switching is when the os will pause and reinstantiate threads
+and asyncronous means that we use colored functions where we pause the exectution when we have something that is thread blocking and we get back to it when that operation is done
+
+
+go is made specifically to be concurrent and it is as simple as calling go function() which will spawn a new goroutine
+
+a goroutine is a thread maintained by the go runtime
+
+we can use go with annonymous functions and also we can create IIFEs which are either named or annonymous

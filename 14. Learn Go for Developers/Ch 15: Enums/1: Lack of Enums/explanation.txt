@@ -1,0 +1,24 @@
+go doesn't have:
+
+sum types:  a variable that can be either on type or other type
+  - tagged unions - amazing in haskell and other functional programming languages
+  - discriminated unions
+  - algebraic data types ADT
+unions: "A struct where you only have one element of the how many are presented"
+enums: GO DOESN'T HAVE ENUMS???
+
+in go, like in rust, erros are just values
+well, you have panic/recover for threads but you should avoid using it
+
+
+user, err := getUser()
+if err != nil {
+    return fmt.Errorf("failed to get user: %w", err)
+}
+// do something with user
+
+let user_result = get_user();
+let user = match user_result {
+    Ok(user) => user,
+    Err(error) => return Err(format!("failed to get user: {}", error)),
+};

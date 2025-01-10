@@ -1,0 +1,55 @@
+Typescript union types:
+type sendingChannel = "email" | "sms" | "phone";
+
+function sendNotification(ch: sendingChannel, message: string) {
+    // send the message
+}
+
+In go the closest thing to union types are type aliasing:
+
+type sendingChannel = string
+
+const (
+    Email sendingChannel = "email"
+    SMS   sendingChannel = "sms"
+    Phone sendingChannel = "phone"
+)
+
+func sendNotification(ch sendingChannel, message string) {
+    // send the message
+}
+
+go will stop this
+sendingCh := "slack"
+sendNotification(sendingCh, "hello") // string is not sendingChannel
+
+but not this
+// "slack" is automatically implied as a sendingChannel
+sendNotification("slack", "hello")
+
+will also not stop this
+sendingCh := "slack"
+convertedSendingCh := sendingChannel(sendingCh) -- type force casting
+sendNotification(convertedSendingCh, "hello")
+
+in go you have more liberty than in Typescript which can sometimes in these situations be bad
+
+there is a difference between
+type x = string and type x string
+ths first one makes an alias so x is a new name for a string - x is interchangable with string
+but in the second one we create a new type - x and string are different types
+
+type perm string
+
+const (
+    Read  perm = "read"
+    Write perm = "write"
+    Exec  perm = "execute"
+)
+
+var Admin = "admin"
+var User = perm("user")
+
+func checkPermission(p perm) {
+    // check the permission
+}

@@ -1,0 +1,27 @@
+a module is a collection of packages that are released together
+
+hellogo:
+  - main package
+  - library package 1
+  - library package 2
+
+
+usually we have 1 module per repository:
+at the root of the module we have a file called go.mod
+this file contains:
+
+    The module path
+    The version of the Go language your project requires
+    Optionally, any external package dependencies your project has
+
+ex of go.mod
+
+module github.com/bootdotdev/exampleproject - import path for all the packages in that module
+
+go 1.23.0
+
+require github.com/google/examplepackage v1.3.0
+
+An "import path" is a string used to import a package. A package's import path is its module path joined with its subdirectory within the module. For example, the module github.com/google/go-cmp contains a package in the directory cmp/. That package's import path is github.com/google/go-cmp/cmp. Packages in the standard library do not have a module path prefix.
+
+

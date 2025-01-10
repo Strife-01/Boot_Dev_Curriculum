@@ -1,0 +1,30 @@
+type stats struct {
+	Reach    uint16
+	NumPosts uint8
+	NumLikes uint8
+}
+
+in memory:
+16bytes, 8bytes, 8bytes
+
+
+type stats struct {
+	NumPosts uint8
+	Reach    uint16
+	NumLikes uint8
+}
+
+in memory:
+8bytes 8bytes_padding 16Bytes 8bytes 8bytes_padding
+
+go will try to align the data in memory in a contiguous fashion so it will add padding when it needs to separate data
+rule of thumb, when designing a struct, always have the data going from the highest memory to the lowest, to minimize padding
+
+it is done for execution speed but it can result in memory wasted
+
+
+reflect package can be used to debug memory layout
+
+
+typ := reflect.TypeOf(stats{})
+fmt.Printf("Struct is %d bytes\n", typ.Size())

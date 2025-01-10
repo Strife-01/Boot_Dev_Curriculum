@@ -1,0 +1,5 @@
+terminal is, historically the device we type commands in
+terminal (now) = terminal emulator
+terminal draws text on the screen and processing the keystrokes
+
+the commands are run by the shell

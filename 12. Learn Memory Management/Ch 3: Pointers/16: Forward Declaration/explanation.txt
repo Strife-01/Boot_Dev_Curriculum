@@ -1,0 +1,28 @@
+typedef struct Node {
+  int value;
+  node_t *next;
+} node_t;
+
+if you want this you have multiple options
+
+typedef struct Node node_t;
+typedef struct Node {
+  int value;
+  node_t *next;
+} node_t;
+
+OR
+
+typedef struct Node {
+  int value;
+  struct Node *next;
+} node_t;
+
+BUT NOT this
+
+typedef struct Node node_t;
+
+typedef struct BadName {
+  int value;
+  node_t *next;
+} node_t;

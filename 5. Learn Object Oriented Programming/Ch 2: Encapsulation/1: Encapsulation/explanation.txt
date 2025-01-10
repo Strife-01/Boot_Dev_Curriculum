@@ -1,0 +1,41 @@
+Encapsulation is hiding the complexity under a black box and exposing outside the way to solve a problem.
+
+a good example is a function:
+acceleration = calc_acceleration(initial_speed, final_speed, time)
+you only care about the inputs and what it does as the caller, not about how it does it
+
+we encapsulate data with access modifiers
+
+public private and protected
+by default everything is public
+
+in python we don't have restrictions as in Java or C++ or C# so we have to obey the conventions
+
+in Python
+variables and methods are public by default 
+preceded by _ means they are protected 
+preceded by __ means they are private
+
+in java there is also package private which is the default when we have no access modifiers
+
+public - accessible everywhere
+private - only accessible under the scope of the class - state possesing this access modifier needs getters and setters to modify them
+protected - accessible withing its class and the inheriting classes
+
+
+class Wall:
+    def __init__(self, armor, magic_resistance): - this is a pribate method
+        self.__armor = armor - this is a private property
+        self.__magic_resistance = magic_resistance
+
+    def get_defense(self): - public getter getter 
+        return self.__armor + self.__magic_resistance
+
+front_wall = Wall(10, 20)
+
+# This results in an error
+print(front_wall.__armor)
+
+# This works
+print(front_wall.get_defense())
+# 30

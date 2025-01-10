@@ -1,0 +1,24 @@
+A good child class is a strict subset of its parent class.
+
+class Wall:
+    def __init__(self, height):
+        self.__height = height
+
+    def get_height(self):
+        return self.__height
+
+class Castle(Wall):
+    def __init__(self, height, towers):
+        super().__init__(height)
+        self.towers = towers
+
+    def get_tower_height(self):
+        return self.get_height() * 2
+
+the interpretor will force some rules for Inheritance and privateness but we can still access fields from the super class
+
+here Castle can access the __height private filed by using _Wall__height field which is a field created by the Python interpretor for inherited access
+
+so we work with conventions
+
+But we still should use getters and setters for safe usage

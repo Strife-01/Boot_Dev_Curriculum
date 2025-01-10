@@ -1,0 +1,47 @@
+
+    void update_soldier(soldier_t *s): means the function returns nothing
+    soldier_t new_soldier(void): means the function takes no arguments.
+
+
+also void *  - void pointers or generic pointers which cannot be directly dereferenced unless we repoint them to something else.
+
+what a void* is, is a pointer that can be anything
+void * doesn't have pointer arithmetic
+
+int number = 42;
+void *generic_ptr = &number;
+
+// This doesn't work
+printf("Value of number: %d\n", *generic_ptr);
+
+// This works: Cast to appropriate type before dereferencing
+printf("Value of number: %d\n", *(int*)generic_ptr);
+
+
+so void * is type agnostic meaning it doesn't retain information about the type. You need to cast it back to the data in order to be able to dereference it 
+
+this is why we force cast malloc's return to a specific pointer type.
+
+We can use this behaviour if we pass data that we don't know the type of at compile time.
+typedef enum DATA_TYPE {
+  INT,
+  FLOAT
+} data_type_t;
+
+void printValue(void *ptr, data_type_t type) {
+  if (type == INT) {
+    printf("Value: %d\n", *(int*)ptr);
+  } else if (type == FLOAT) {
+    printf("Value: %f\n", *(float*)ptr);
+  }
+}
+
+int number = 42;
+printValue(&number, INT);
+
+float decimal = 3.14;
+printValue(&decimal, FLOAT);
+
+we hold the data in one void pointer and the data type in another variable like an enum
+
+we can use this behaviour to allocate data for languages like python

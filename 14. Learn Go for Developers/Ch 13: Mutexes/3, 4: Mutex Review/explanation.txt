@@ -1,0 +1,92 @@
+mutexes solve concurrent read/write problem
+this is the race condition - i.e., multiple threads read and write to the data at the same time so that the final value is not the correct one
+
+go run -race main.go - will help us check for race condition
+
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	m := map[int]int{}
+	go writeLoop(m)
+	go readLoop(m)
+
+	// stop program from exiting, must be killed
+	block := make(chan struct{})
+	<-block
+}
+
+func writeLoop(m map[int]int) {
+	for {
+		for i := 0; i < 100; i++ {
+			m[i] = i
+		}
+	}
+}
+
+func readLoop(m map[int]int) {
+	for {
+		for k, v := range m {
+			fmt.Println(k, "-", v)
+		}
+	}
+}
+
+
+If we run the program on a multi-core machine, we get the following output: fatal error: concurrent map iteration and map write
+
+
+in go it is not safe to read and write map at the same time
+
+
+sync.Mutex{} is a struct that provides us with Lock and Unlock
+
+this is under the sync package
+
+
+
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+func main() {
+	m := map[int]int{}
+
+	mu := &sync.Mutex{}
+
+	go writeLoop(m, mu)
+	go readLoop(m, mu)
+
+	// stop program from exiting, must be killed
+	block := make(chan struct{})
+	<-block
+}
+
+func writeLoop(m map[int]int, mu *sync.Mutex) {
+	for {
+		for i := 0; i < 100; i++ {
+			mu.Lock()
+			m[i] = i
+			mu.Unlock()
+		}
+	}
+}
+
+func readLoop(m map[int]int, mu *sync.Mutex) {
+	for {
+		mu.Lock()
+		for k, v := range m {
+			fmt.Println(k, "-", v)
+		}
+		mu.Unlock()
+	}
+}
+
+here we use a mutex to avoid race conditions

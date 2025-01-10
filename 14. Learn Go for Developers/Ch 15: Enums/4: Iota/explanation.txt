@@ -1,0 +1,18 @@
+go has a feature that is called iota which is used with type aliasing and it is used like an enum in C
+
+type sendingChannel = int
+
+const (
+    Email sendingChannel = iota
+    SMS
+    Phone
+)
+
+it creates a sequence of numbers from 0 onwards.
+
+here Email = 0
+SMS = 1
+Phone = 2
+etc
+
+it is not an enum is a sequence of ints

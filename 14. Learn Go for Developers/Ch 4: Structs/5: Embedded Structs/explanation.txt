@@ -1,0 +1,28 @@
+type car struct {
+  brand string
+  model string
+}
+
+type truck struct {
+  // "car" is embedded, so the definition of a
+  // "truck" now also additionally contains all
+  // of the fields of the car struct
+  car
+  bedSize int
+}
+
+
+lanesTruck := truck{
+  bedSize: 10,
+  car: car{
+    brand: "toyota",
+    model: "camry",
+  },
+}
+
+fmt.Println(lanesTruck.bedSize)
+
+// embedded fields promoted to the top-level
+// instead of lanesTruck.car.brand
+fmt.Println(lanesTruck.brand)
+fmt.Println(lanesTruck.model)

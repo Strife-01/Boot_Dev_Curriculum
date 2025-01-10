@@ -1,0 +1,27 @@
+Memory is devided into 2 major memory regions: - The Stack and the Heap.
+
+the local variables are stored on the stack and stack frames for the function calls which return addresses for where the program needs to get back the execution from and also the function arguments are stored on the stack 
+
+when the function returns, the stack frame gets deallocated
+
+The stack is aptly named: it is a stack (the "Last In, First Out" data structure) of memory frames. Each time a function is called, a new frame is pushed onto the stack. When the function returns, its frame is popped off the stack.
+
+
+void create_typist(int uses_nvim) {
+  int wpm = 150;
+  char name[4] = {'t', 'e', 'e', 'j'};
+}
+
+
+We have the stack pointer which tells us where we can allocated memory for the stack frame
+
+when we call the function, the stack pointer moves to make space for the stack frame
+the stack frame will contain: - in this order:
+- return address
+- arguments 
+- function body local variables
+we know exactly how much space to allocate as we either have variables of fixed size or pointers which we know the memory they take
+
+depending on the architecture the stack can grow high or low - use recursion to see how it is
+
+

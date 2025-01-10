@@ -1,0 +1,10 @@
+In C, there are two ways to write comments:
+
+// This is a single-line comment
+
+/*
+This is a multi-line comment
+I can just keep adding lines
+and it will still be a comment
+*/
+

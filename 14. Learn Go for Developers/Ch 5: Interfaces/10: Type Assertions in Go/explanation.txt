@@ -1,0 +1,20 @@
+in go we can assert a type when working with an interface because, when we have multiple types implementing an interface we might need one to 
+be a certain type so we want to type assert it
+this will return 2 values, the data in that type or nil if none and a bool value which we denote by convention with ok which tells us
+if the data is of that type
+
+type shape interface {
+	area() float64
+}
+
+type circle struct {
+	radius float64
+}
+
+c, ok := s.(circle) // here we assert the type of s which is a shape type but we assert it with circle to see it is a circle
+if !ok {
+	// log an error if s isn't a circle
+	log.Fatal("s is not a circle")
+}
+
+radius := c.radius

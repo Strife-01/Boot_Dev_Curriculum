@@ -1,0 +1,22 @@
+typedef union Color {
+  struct {
+    uint8_t r;
+    uint8_t g;
+    uint8_t b;
+    uint8_t a;
+  } components;
+  uint32_t rgba;
+} color_t;
+
+
+using helper fields to access different parts of the code 
+
+R | G | B | A
+RGBA 
+
+we take the same amount of storage data but this way we can either take the entire value as .rgba
+or we can access individual values as .components.r or .components->r 
+
+The convenience of additional fields, with the efficiency of a single memory location!
+
+Nice trick, because of the way the memory is structured and how compiler allocates the memory

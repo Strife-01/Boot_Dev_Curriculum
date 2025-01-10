@@ -1,0 +1,3 @@
+because the unions store the values in the same memory space, accessing other values than the ones required are tipically a bad idea
+
+

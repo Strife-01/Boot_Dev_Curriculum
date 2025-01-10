@@ -1,0 +1,11 @@
+just like stdout, stderr is a stream of data that is printed into the terminal but is for errors
+
+we can also redirect it
+
+
+redirecting the output:
+> - stdout
+2> - stderr
+
+we can also append >>
+2>>

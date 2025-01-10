@@ -1,0 +1,1 @@
+an address is just an index in hexadecimal for the very big memory array which is the RAM and is basically a number. A whole number

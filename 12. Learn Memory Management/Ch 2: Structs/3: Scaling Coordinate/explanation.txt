@@ -1,0 +1,7 @@
+struct Human become_older(int age, char *name) {
+  struct Human h = {.age = age, .name = name};
+  h.age++;
+  return h;
+}
+
+this way we can return multiple variables at once by returning a struct

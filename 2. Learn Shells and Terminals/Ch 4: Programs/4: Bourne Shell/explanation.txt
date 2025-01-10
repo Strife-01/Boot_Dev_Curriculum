@@ -1,0 +1,9 @@
+
+    sh - The Bourne shell. This is the original Unix shell and is POSIX-compliant. It's very basic and doesn't have many quality-of-life features.
+    bash - The Bourne Again shell. This is the most popular shell on Linux. It builds on sh, but also has a lot of extra features.
+    zsh - The Z shell. This is the most popular shell on macOS. Like bash, it does what sh can do, but also has a lot of extra features.
+
+
+sh or The Bourne Shell is POSIX-compliant (standard for compatibility between operating systems)
+
+both BASH and ZSH are sh complient aka they can run .sh scripts but have additional features

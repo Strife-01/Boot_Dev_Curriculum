@@ -1,0 +1,8 @@
+names := map[string]int{}
+missingNames := []string{}
+
+if _, ok := names["Denna"]; !ok {
+    // if the key doesn't exist yet,
+    // append the name to the missingNames slice
+    missingNames = append(missingNames, "Denna")
+}

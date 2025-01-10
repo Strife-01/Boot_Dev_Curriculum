@@ -1,0 +1,18 @@
+errors are just interfaces this mean we can implement our own custom error types by createing types which implement the Error() string method
+
+
+type userError struct {
+    name string
+}
+
+func (e userError) Error() string {
+    return fmt.Sprintf("%v has a problem with their account", e.name)
+}
+
+
+func sendSMS(msg, userName string) error {
+    if !canSendToUser(userName) {
+        return userError{name: userName}
+    }
+    ...
+}

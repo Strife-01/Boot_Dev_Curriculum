@@ -1,0 +1,3 @@
+in C strings are not an immutable separate type but an array of characters
+char *msg_from_dax = "You still have 0 users";
+

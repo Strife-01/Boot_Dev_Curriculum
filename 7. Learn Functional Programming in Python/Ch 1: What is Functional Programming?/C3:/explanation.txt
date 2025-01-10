@@ -1,0 +1,1 @@
+We need to add a feature to Doc2Doc that merges two lists of items, removes any duplicates, and returns a sorted list of unique items. This is important for consolidating certain documents and metadata.

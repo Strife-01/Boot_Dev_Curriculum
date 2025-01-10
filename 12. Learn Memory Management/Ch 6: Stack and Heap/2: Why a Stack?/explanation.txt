@@ -1,0 +1,20 @@
+C and Go allocate as much as possible on the Stack cause it is more efficient.
+Python allocates most of the stuff on the Heap.
+
+Reasons for being awesome:
+
+- efficient pointer management:
+  because stack allocation is just a movement of the stack pointer it is very fast.
+
+- Cache-Friendly memory access:
+  the stack is a big contiguous place in memory which makes it very easy to navigate
+  it enhances caching due to spacial locality 
+
+- Automatic memory management:
+  because the stack frame has 2 big pointers, the return pointer and the stack pointer
+  when a stack frame is done we go back to the return pointer which is at the beginning of this stack
+  frame and we populate it again which make the management of memory really easy and efficient
+
+- Inherent thread safety:
+  each thread has its own stack which makes it impossible to have race conditions which is great 
+  when we allocate threads on the heap we need to syncronize them which adds additional overhead

@@ -1,0 +1,9 @@
+generics are used to make the code reusable for other data structures or types
+
+usually used in libraries and packages because they are importable
+
+go is simple and it doesn't have a lot of abstractions cause it wants to be very simplistic 
+
+go lacks a lot of features but it has what it needs to be very fast to work with and to run 
+
+it added generics cause they make way easier reusable code

@@ -1,0 +1,11 @@
+# open the man pages for the 'man' command
+man man
+
+man ls
+# type '/-r' to start searching
+
+# press 'n' to jump to the next result
+
+# press 'N' to go back if you went too far
+
+use man with grep

@@ -1,0 +1,41 @@
+for (initialization; condition; final-expression) {
+    // Loop Body
+}
+
+there is no for each in C - C doesn't have the iterator pattern - no iterables
+for car in cars:
+    print(car)
+
+
+Parts of a for Loop
+
+    Initialization
+        Executed only once at the beginning of the loop.
+        Is typically used to initialize the loop counter: int i = 0; for example
+    Condition
+        Checked before each iteration.
+        If true, execute the body. If false, terminate the loop
+        Often checks to ensure i is less than some value: i < 5; for example
+    Final-expression
+        Executed after each iteration of the loop body.
+        Can be used to update the loop counter or run any other code: i++ for example
+    Loop Body
+        The block of code that is executed while the condition is true.
+
+
+
+#include <stdio.h>
+
+int main() {
+  for (int i = 0; i < 5; i++) {
+    printf("%d\n", i);
+  }
+  return 0;
+}
+
+// Prints:
+// 0
+// 1
+// 2
+// 3
+// 4

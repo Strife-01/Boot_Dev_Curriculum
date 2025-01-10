@@ -1,0 +1,17 @@
+2 types of programs:
+- Compiled
+- Interpreted
+  - Sometimes JIT
+
+Compiled - the source code is compiled into binary for the computer to understand, very hardware specific
+Interpreted - the program is Interpreted by another program called and Interpretor 
+
+shell is an interpretor that runs shell scripts
+
+which program
+which is a program which tells you where another program is located on the machine
+
+
+bat -A will show all the characters 
+
+objdump -d program will disassemble a compiled binary into ASM 

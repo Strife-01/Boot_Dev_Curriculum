@@ -1,0 +1,5 @@
+The difference between a "snek integer" and a regular C integer is that the Snek integer:
+
+    Is allocated on the heap
+    Can store additional metadata about itself (for now, just its type)
+

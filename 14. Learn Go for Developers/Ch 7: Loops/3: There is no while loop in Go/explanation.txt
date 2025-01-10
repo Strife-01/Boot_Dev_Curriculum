@@ -1,0 +1,5 @@
+because in go we can omit sections from the for loop, there is not while loop, just a for loop with just the condition
+
+for CONDITION {
+  // do some stuff while CONDITION is true
+}

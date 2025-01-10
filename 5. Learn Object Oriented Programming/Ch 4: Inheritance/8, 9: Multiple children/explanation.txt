@@ -1,0 +1,4 @@
+So far we've worked with linear class inheritance, but usually, inheritance hierarchies form trees, not lines. A parent class can have multiple children.
+
+
+and those children can have multiple children and so on

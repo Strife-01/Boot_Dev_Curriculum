@@ -1,0 +1,25 @@
+go doesn't have classes but it has generics from go 1.18
+
+Problem:
+func splitIntSlice(s []int) ([]int, []int) {
+    mid := len(s)/2
+    return s[:mid], s[mid:]
+}
+
+func splitStringSlice(s []string) ([]string, []string) {
+    mid := len(s)/2
+    return s[:mid], s[mid:]
+}
+
+Solution:
+func splitSlice[T any](s []T) ([]T, []T) {
+    mid := len(s)/2
+    return s[:mid], s[mid:]
+}
+
+
+any is a type constraint that lets go compiler know that any type can be replaced with T but we can also constraint it
+
+
+var myZeroInt int
+var myZero T

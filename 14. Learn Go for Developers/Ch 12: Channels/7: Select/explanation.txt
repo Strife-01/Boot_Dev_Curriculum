@@ -1,0 +1,12 @@
+the select is like switch but for channels
+if we have a goroutine listening to multiple channels at the same time we can use a select
+statement and it will choose the first channel that gets populated 
+
+select {
+case i, ok := <- chInts:
+    fmt.Println(i)
+case s, ok := <- chStrings:
+    fmt.Println(s)
+}
+
+the ok tells us if the channel is active or closed

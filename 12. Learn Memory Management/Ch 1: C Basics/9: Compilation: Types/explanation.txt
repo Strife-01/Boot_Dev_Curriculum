@@ -1,0 +1,1 @@
+in a statically typed language you cannot change the types of a variable

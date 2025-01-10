@@ -1,0 +1,10 @@
+C:
+  int (*fp)(int (*ff)(int x, int y), int b)
+  int y;
+
+Go:
+  f func(func(int,int) int, int) int
+  x int
+  p *int
+  a [3]int
+

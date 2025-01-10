@@ -1,0 +1,9 @@
+int get_integer(void) {
+    return 42;
+}
+
+void print_integer(int x) {
+    printf("this is an int: %d", x);
+}
+
+it is not a value it is a signifier for somefunc that takes no args or return nothing

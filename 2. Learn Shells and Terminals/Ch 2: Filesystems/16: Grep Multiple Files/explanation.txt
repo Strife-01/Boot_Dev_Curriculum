@@ -1,0 +1,2 @@
+grep "hello" hello.txt hello2.txt - search multiple files
+grep -r "hello" . - search the entire current directory

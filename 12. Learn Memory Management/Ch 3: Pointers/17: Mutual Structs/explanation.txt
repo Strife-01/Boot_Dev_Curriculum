@@ -1,0 +1,16 @@
+We can use forward declaration when we want circular referencing
+
+structs referencing eachother
+
+typedef struct Computer computer_t;
+typedef struct Person person_t;
+
+struct Person {
+  char *name;
+  computer_t *computer;
+};
+
+struct Computer {
+  char *brand;
+  person_t *owner;
+};

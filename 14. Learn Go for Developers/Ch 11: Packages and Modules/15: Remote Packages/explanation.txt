@@ -1,0 +1,17 @@
+replace github.com/wagslane/mystrings v0.0.0 => ../mystrings
+this only works for local packages. If we want to work with open source remote packages we need to do the following:
+
+if we want to work with a package we need to make sure it exists at the imported url
+when we use:
+require (
+	example.com/username/mystrings v0.0.0
+)
+
+module ... -> ... is the import path - what we import 
+this is just a prefix for any nested packages, we can import just some nested packages not necessarly the whole root module
+
+
+go get - will download and install the files for the package/module from the provided url
+we need to download the files if we want to import them in our project
+	
+import tinytime "github.com/wagslane/go-tinytime"
