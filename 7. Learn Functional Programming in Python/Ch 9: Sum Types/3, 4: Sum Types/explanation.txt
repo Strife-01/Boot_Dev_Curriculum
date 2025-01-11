@@ -1,0 +1,23 @@
+Python does not enforce your types before your code runs. That's why we need this line here to raise an Exception if a color is invalid:
+
+def color_to_hex(color):
+    if color == Color.GREEN:
+        return '#00FF00'
+    elif color == Color.BLUE:
+        return '#0000FF'
+    elif color == Color.RED:
+        return '#FF0000'
+    # handle the case where the color is invalid
+    raise Exception('Unknown color')
+
+In a language like Rust we could write the same thing like this:
+
+fn color_to_hex(color: Color) -> String {
+    match color {
+        Color::Green => "#00FF00".to_string(),
+        Color::Blue => "#0000FF".to_string(),
+        Color::Red => "#FF0000".to_string(),
+    }
+}
+
+Notice how there isn't any case for an unknown value? That's because the Rust code will fail to compile (a step that happens before the code runs at all) if the Color is a different value. This static enforcement is a huge benefit of sum types, and it's a shame we can't get that in Python.

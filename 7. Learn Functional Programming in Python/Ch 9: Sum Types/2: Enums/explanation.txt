@@ -1,0 +1,108 @@
+in Python we can use enums like this
+
+from enum import Enum
+
+Color = Enum('Color', ['RED', 'GREEN', 'BLUE'])
+print(Color.RED)  # this works, prints 'Color.RED'
+print(Color.TEAL) # this raises an exception
+
+Now Color is a sum type! At least, as close as we can get in Python.
+
+There are a few benefits:
+
+    A "Color" can only be RED, GREEN, or BLUE. If you try to use Color.TEAL, Python raises an exception.
+    There is a central place to see the "valid" values for a Color.
+    Each "Color" has a "name" (e.g. Color.RED) and a "value" (e.g. 1). The value is an integer and is used under the hood instead of the name. Integers take up less memory than strings, which helps with performance.
+
+
+
+Enums are another Sum type.
+
+Product Types or Sum types are also called Algebraic Data Types. They come from Category Theory and they represent the sheer amount of possibilities for values that we can get for our types.
+
+For example in a Sum Type we can have only one of the total possibilities of data and it is a finite number of them.
+Enum or bool are great representations of this as they have a limited number of possibilities.
+
+But an object with multiple fields is called a Product Type as it is represented by the total number of combinations of the accepted values for the fields of the object.
+
+Sum Types are also called union types
+
+
+Sum Types
+
+    A sum type is a type that can represent values from a set of distinct types, typically defined as a choice between them. In programming languages, they often correspond to a type system construct that can hold different types of values.
+    They are common in functional programming and type theory.
+
+Other Names for Sum Types
+
+    Union Types: In some contexts, "union types" refer to types that can hold values from multiple different types (like a tagged union in C). However, in languages like TypeScript, the term "union type" is used more loosely, not necessarily implying tagging.
+
+    Algebraic Data Types (ADTs):
+        Algebraic Data Types are composite types formed by combining other types. They are categorized as:
+            Sum types: Represent choice (e.g., Either or Option types).
+            Product types: Represent combination (e.g., tuples or structs).
+        The term "algebraic" comes from treating types as sets of possible values, similar to how algebra operates on numbers.
+
+Example in Functional Languages
+
+In Haskell, a sum type might be defined as:
+
+data Maybe a = Nothing | Just a
+
+Here, Maybe a can either be Nothing or Just a, making it a sum type.
+Tagged Union in TypeScript (Union Type)
+
+type Shape = 
+  | { kind: "circle", radius: number }
+  | { kind: "square", sideLength: number };
+
+Key Characteristics
+
+    Sum Types provide compile-time safety by ensuring all possible cases are handled.
+    They are common in languages like Haskell, Rust, F#, and even modern JavaScript/TypeScript for discriminated unions.
+
+
+Category Theory and Types
+
+Category theory provides a formal mathematical framework for reasoning about types, functions, and their relationships. In this context:
+
+    Types can be thought of as objects in a category.
+    Functions (or morphisms) are arrows between these objects, representing transformations between types.
+
+Sum and Product Types in Category Theory
+
+These correspond to categorical constructs:
+
+    Product Types (Categorical Products):
+        Represented as tuples or records.
+        Analogous to Cartesian products in set theory.
+        The type A × B contains pairs (a, b) where a is of type A and b is of type B.
+
+    Example (in Haskell):
+
+(Int, String) -- A product type holding an integer and a string
+
+Sum Types (Categorical Coproducts):
+
+    Represented by choices or variants, often using tagged unions or discriminated unions.
+    Analogous to disjoint unions in set theory.
+    The type A + B means a value is either of type A or type B.
+
+Example (in Haskell):
+
+    data Either a b = Left a | Right b
+
+Algebraic Data Types (ADTs)
+
+ADTs are so named because types can be reasoned about algebraically:
+
+    Sum types (Either A B) behave like addition: the number of possible values is the sum of possible values in A and B.
+    Product types ((A, B)) behave like multiplication: the number of possible values is the product of possible values in A and B.
+
+Why Category Theory?
+
+Category theory helps formalize these ideas and connect them to broader concepts like:
+
+    Functor: A type that can be mapped over (like List in many languages).
+    Monad: A type for modeling computations with side effects.
+    Natural Transformation: A mapping between functors that preserves their structure.
