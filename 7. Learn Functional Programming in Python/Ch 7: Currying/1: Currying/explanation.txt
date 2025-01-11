@@ -1,0 +1,20 @@
+Currying is a special type of function transformation cause we take a function that requires multiple arguments and we return a function that take 1 arg and return a function that takes the 2nd argument and so on
+
+box_volume(3, 4, 5)
+box_volume(3)(4)(5)
+
+def sum(a, b):
+  return a + b
+
+print(sum(1, 2))
+# prints 3
+
+def sum(a):
+  def inner_sum(b):
+    return a + b
+  return inner_sum
+
+print(sum(1)(2))
+# prints 3
+
+The sum function only takes a single input, a. It returns a new function that takes a single input, b. This new function when called with a value for b will return the sum of a and b.

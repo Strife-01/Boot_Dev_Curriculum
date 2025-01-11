@@ -1,0 +1,52 @@
+Decorators in python are just syntactic sugar for higher order functions.
+Instead of returning a new function and then calling that one, we call the first one directly because the decorator does the rest
+
+def vowel_counter(func_to_decorate):
+    vowel_count = 0
+    def wrapper(doc):
+        nonlocal vowel_count
+        vowels = "aeiou"
+        for char in doc:
+            if char in vowels:
+                vowel_count += 1
+        print(f"Vowel count: {vowel_count}")
+        return func_to_decorate(doc)
+    return wrapper
+
+@vowel_counter
+def process_doc(doc):
+    print(f"Document: {doc}")
+
+process_doc("What")
+# Vowel count: 1
+# Document: What
+
+process_doc("a wonderful")
+# Vowel count: 5
+# Document: a wonderful
+
+process_doc("world")
+# Vowel count: 6
+# Document: world
+
+
+Python decorators are just another (sometimes simpler) way of writing a higher-order function. These two pieces of code are identical:
+With Decorator
+
+@vowel_counter
+def process_doc(doc):
+    print(f"Document: {doc}")
+
+process_doc("Something wicked this way comes")
+
+Without Decorator
+
+def process(doc):
+    print(f"Document: {doc}")
+
+process_doc = vowel_counter(process)
+process_doc("Something wicked this way comes")
+
+
+when we call the function we decorate, the wrapper will be now called directly
+so we will execute the wrapper function code

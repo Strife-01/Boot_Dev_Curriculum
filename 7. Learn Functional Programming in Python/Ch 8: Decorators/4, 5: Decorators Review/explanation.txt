@@ -1,0 +1,15 @@
+A Python decorator is just syntactic sugar for higher-order functions. "Syntactic sugar" just means "a more convenient syntax".
+
+Not all programming languages have built-in decorators, but most do support higher-order functions and closures.
+
+Some of the famous functional languages like:
+
+    Haskell
+    Erlang
+    Clojure
+    Lisp
+
+do not have special syntax decorators, but they do have higher-order functions and closures, meaning the decorator pattern can still be used. So, if you understand those concepts, they will serve you well in many different languages.
+
+1. True
+2. commonplace in most programming languages

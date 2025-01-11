@@ -1,0 +1,33 @@
+Remember, currying is when we take a function that accepts multiple arguments:
+
+final_volume = box_volume(3, 4, 5)
+print(final_volume)
+# 60
+
+And convert it into a series of functions that each accept a single argument:
+
+final_volume = box_volume(3)(4)(5)
+print(final_volume)
+# 60
+
+    box_volume(3) returns a new function that accepts a single integer and returns a new function
+    box_volume(3)(4) returns another new function that accepts a single integer and returns a new function
+    box_volume(3)(4)(5) returns the final result
+
+Here's another way of calling it, where each function is stored in a variable before being called:
+
+with_length_3 = box_volume(3)
+with_len_3_width_4 = with_length_3(4)
+final_volume = with_len_3_width_4(5)
+print(final_volume)
+# 60
+
+Here are the function definitions:
+
+def box_volume(length):
+  def box_volume_with_len(width):
+    def box_volume_with_len_width(height):
+      return length * width * height
+    return box_volume_with_len_width
+  return box_volume_with_len
+

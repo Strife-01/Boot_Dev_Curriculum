@@ -1,0 +1,31 @@
+The whole point of a closure is that it's stateful. It's a function that "remembers" the values from the enclosing scope even after the enclosing scope has finished executing.
+
+It's as if you're saving the state of a function at a particular point in time, and then you can use and update that state later on.
+
+def concatter():
+	doc = ""
+	def inner_func(word):
+		# "nonlocal" tells Python to use the doc
+		# variable from the enclosing scope
+		nonlocal doc
+		doc += word + " "
+		return doc
+	return inner_func
+
+harry_potter_aggregator = concatter()
+harry_potter_aggregator("Mr.")
+harry_potter_aggregator("and")
+harry_potter_aggregator("Mrs.")
+harry_potter_aggregator("Dursley")
+harry_potter_aggregator("of")
+harry_potter_aggregator("number")
+harry_potter_aggregator("four,")
+harry_potter_aggregator("Privet")
+
+print(harry_potter_aggregator("Drive"))
+# Mr. and Mrs. Dursley of number four, Privet Drive
+
+That means that in many cases, closures are not pure functions. They can mutate state outside of their scope and have side effects.
+
+a1: can change
+a2: is not a pure function

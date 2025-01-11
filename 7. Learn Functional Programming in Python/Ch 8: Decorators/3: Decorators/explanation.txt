@@ -1,0 +1,17 @@
+The *args and **kwargs syntax is great for decorators that are intended to work on functions with different signatures.
+def log_call_count(func_to_decorate):
+    count = 0
+
+    def wrapper(*args, **kwargs):
+        nonlocal count
+        count += 1
+        print(f"Called {count} times")
+        # The * and ** syntax unpacks the arguments
+        # and passes them to the decorated function
+        return func_to_decorate(*args, **kwargs)
+
+    return wrapper
+
+The decorated function (process_doc) is still executed inside the decorator's wrapper function. The decorator simply adds extra logic before and/or after the original function call.
+
+The wrapper becomes the new version of the function after decoration. This is the essence of how Python decorators work.
