@@ -1,0 +1,5 @@
+^ is for xor not exponent - Fortran 
+
+** exponent in python
+
+

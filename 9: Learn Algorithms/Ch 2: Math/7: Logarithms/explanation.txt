@@ -1,0 +1,7 @@
+There isn't a language-level operator to calculate a logarithm, but we can import the math library and use the math.log() function.
+
+import math
+
+print(f"Logarithm base 2 of 16 is: {math.log(16, 2)}")
+# Logarithm base 2 of 16 is: 4.0
+

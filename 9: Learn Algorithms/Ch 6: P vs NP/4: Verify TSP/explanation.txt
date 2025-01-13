@@ -1,0 +1,32 @@
+TSP takes factorial time to solve because we're forced to try every permutation of all the possible cities. For example, given 4 cities, A, B, C, D, we need to try:
+
+A,B,C,D
+B,A,C,D
+C,A,B,D
+A,C,B,D
+B,C,A,D
+C,B,A,D
+C,B,D,A
+B,C,D,A
+D,C,B,A
+C,D,B,A
+B,D,C,A
+D,B,C,A
+D,A,C,B
+A,D,C,B
+C,D,A,B
+D,C,A,B
+A,C,D,B
+C,A,D,B
+B,A,D,C
+A,B,D,C
+D,B,A,C
+B,D,A,C
+A,D,B,C
+D,A,B,C
+
+That's 4! or 4*3*2*1 or 24 permutations.
+TSP in NP
+
+Although it takes factorial time to solve TSP, TSP is in NP because we can verify a solution much faster. Let's write a TSP verifier!
+

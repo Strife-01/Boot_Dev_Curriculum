@@ -1,0 +1,16 @@
+def sum(nums):
+    total = 0
+    for num in nums:
+        total+=num
+    return total
+
+def double_sum(nums):
+    total = 0
+    for num in nums:
+        double = num + num
+        total += double
+    return total
+
+O(n) O(n)
+double_sum
+

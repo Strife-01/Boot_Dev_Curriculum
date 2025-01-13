@@ -1,0 +1,47 @@
+Nondeterministic polynomial time, NP, is the set of problems whose solutions can be verified in polynomial time, but not necessarily solved in polynomial time.
+
+ P Is in NP
+
+Because all problems that can be solved in polynomial time can also be verified in polynomial time, all the problems in P are also in NP.
+
+A good way of thinking about problems in NP is to imagine that we have a magic oracle that gives us potential solutions to problems. Here would be our process for finding if a problem is in NP:
+
+    Present the problem to the magic oracle
+    The magic oracle gives us a potential solution
+    We verify in polynomial time that the solution is correct
+
+If we can do the verification in polynomial time, the problem is in NP, otherwise, it isn't.
+
+NP Problems Overview
+
+    P (Polynomial Time): Problems that can be solved efficiently (in polynomial time) by an algorithm. This means the solving time can be expressed as a polynomial function of the input size, such as O(n2)O(n2) or O(n3)O(n3).
+
+    NP (Nondeterministic Polynomial Time): Problems for which solutions can be verified efficiently in polynomial time, even if finding those solutions may take much longer (potentially exponential time).
+
+1. NP Superset of P
+
+
+
+
+Easy: - Polynomial Complexity
+O(1)
+O(log n)
+O(n)
+O(n^2)
+
+Easy: - Exponential Complexity
+O(2^n)
+O(n!)
+O(n^n)
+
+
+P is a class of Problems that can be solved in Polynomial Time
+NP is a class of Problems that can be verified in Polynomial Time
+eg - Traveling Salesman Problem (TSP) - a path shorter than a number n! create the arrangements set
+   - Boolean Satisfiability Problem (SAT) - Circuit Design
+   - Knapsack Problem
+   - Passwords
+   - Cryptography
+
+One of the millenial problem is if that P = NP - if we can solve any NP time Problem in P time.
+We believe P != NP but there is no formal proof.

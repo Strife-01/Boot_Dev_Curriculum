@@ -1,0 +1,36 @@
+# names is an array of strings
+def get_name_at_index(names, i):
+    return names[i]
+
+O(1)
+
+def naive_log2(x):
+	count = 0
+	while x > 1:
+		x /= 2
+		count += 1
+	return count
+
+O(log(n))
+
+#  halvedSections returns a list of lists.
+#  For example, n=12 results in:
+#    [
+#       [0 1 2 3 4 5 6 7 8 9 10 11 12]
+#       [0 1 2 3 4 5 6]
+#       [0 1 2 3]
+#       [0 1]
+#    ]
+def halved_sections(n):
+    rows = []
+    i = n
+    while i > 0:
+        col = []
+        for j in range(i+1):
+            col.append(j)
+        rows.append(col)
+        i //= 2
+    return rows
+T(n) = O(n + n/2 + n/4 + … 1)
+O(2n)
+O(n)

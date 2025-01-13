@@ -1,0 +1,22 @@
+NP-Hard is a problem that, all the problems in NP are at least as hard as this one.
+All NP-Complete problem are NP-Hard but not the other way around
+
+A problem is NP-Hard if every problem in NP can be reduced into it in polynomial time.
+A problem is NP-Complete if it is in NP and every other problem in NP can be reduced into it in polynomial time.
+
+The difference is that NP-Complete must be verifiable in polynomial time. The must be in NP, while NP-Hard don't have to.
+They can even not have a solution at all.
+
+Not all NP-Hard problems are in NP.
+
+if P = NP than all the problems are NP-Hard
+else P are not in NP-Hard as the NP-Complete problems are in the NP-Hard but not all NP problems are NP-Complete.
+
+
+1. NP-Hard problems must have reductions from all NP problems in polynomial time.
+
+yes cause all NP problems are at least as hard as they are and all P are in NP so all problems can be boiled down to a NP hard
+
+if we could solve an NP-Hard problem efficiently, we would have efficient solutions for all NP problems, including P problems.
+
+2. All NP-Complete problems are also NP-Hard.

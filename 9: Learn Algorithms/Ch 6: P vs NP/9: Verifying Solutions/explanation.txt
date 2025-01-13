@@ -1,0 +1,13 @@
+Let's circle back to this idea of "slow to solve, fast to verify".
+
+Even when we aren't specifically talking about P and NP, the concept of "slow to solve, fast to verify" is very important in real-world software. As a trivial example, imagine the password on an email account. When a user inputs a password like:
+
+p@ssword4Mi
+
+It's easy to verify if that password matches the one we have saved on file. It's literally as easy as:
+
+should_grant_access = user_input == saved_password
+
+The useful bit is that it takes much longer to guess the correct password.
+
+Note: This password example demonstrates the guess/verify concept well, but when it comes to storing passwords in plain text this example is very insecure. We'll cover how to handle passwords in a production system in a future course.

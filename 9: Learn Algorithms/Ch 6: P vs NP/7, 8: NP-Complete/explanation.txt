@@ -1,0 +1,24 @@
+To reduce a problem A to a problem B we use a reducer that will reduce the problem from an unsolved solved problem to one that has been already been solved by us.
+
+We also have NP Complete problems which are not all of them - an NP Complete problem is a problem such that all the other problems in NP can be reduced to that problem in Polynomial Time.
+
+
+Some, but not all problems in NP are also NP-complete.
+
+A problem in NP is also NP-complete if every other problem in NP can be reduced to it in polynomial time.
+What Does "reduced" Mean?
+
+We won't dive deep into the subject of reductions in this course, but we'll cover the basic idea.
+
+Any problem, let's call it Problem A, can be reduced to a different problem which is already solved, Problem B, if there is an algorithm (called a reducer) that turns an algorithm that solved Problem B into an algorithm that will solve Problem A.
+
+Algorithm to solve B -> reducer -> Algorithm to solve A
+
+However, the reducer itself needs to be fast. "Problem A is reducible to Problem B" if the reducer can run in polynomial time.
+
+
+This is amazing cause if you can write any problem in NP by reducing it to a certain NP-complete problem, then, if we can find a P solution to that problem then this means that every problem in NP can be solved in P time which will mean that P = NP.
+
+
+1. in Polynomial time
+2. A solver for NP-complete problems can be quickly reduced to solve all problems in NP.

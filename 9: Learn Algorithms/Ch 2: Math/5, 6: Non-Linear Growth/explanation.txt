@@ -1,0 +1,9 @@
+Generally we try to avoid writing code that causes the usage of a resource to grow quadratically (with an exponent).
+
+    Sometimes that's a lot of computations (CPU utilization / slowness).
+    Sometimes that's a lot of memory usage (RAM utilization)
+    Sometimes that's a large storage requirement (disk space)
+
+A notable exception is in cryptography and security: we want to force attackers to waste resources trying to get at our information.
+
+Factorial is even worse than exponential.

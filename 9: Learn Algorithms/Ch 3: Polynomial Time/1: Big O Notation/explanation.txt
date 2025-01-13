@@ -1,0 +1,9 @@
+Big O is a characterization of algorithms according to their worst-case growth rates
+O(formula)
+
+    O(1) - constant
+    O(n) - linear
+    O(n^2) - squared
+    O(2^n) - exponential
+    O(n!) - factorial
+

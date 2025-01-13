@@ -1,0 +1,12 @@
+
+    Defined: there is a specific sequence of steps that performs a task
+    Unambiguous: there is a "correct" and "incorrect" interpretation of the steps
+    Implementable: it can be executed using software and hardware
+
+Written in pseudocode
+
+
+    Start with an original string called S and a new empty string called R.
+    Loop through S from its last character to its first character, and for each one, add it to the end of R.
+    Once you’ve processed all the characters, return R.
+

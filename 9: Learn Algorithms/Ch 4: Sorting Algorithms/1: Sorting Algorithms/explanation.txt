@@ -1,0 +1,15 @@
+items = [1, 5, 3]
+print(sorted(items)) # [1, 3, 5]
+
+sorted is a very efficient C function
+
+
+import datetime
+
+mydate = datetime.datetime.now()
+
+print("__str__() string: ", mydate.__str__())
+print("str() string: ", str(mydate))
+
+print("__repr__() string: ", mydate.__repr__())
+print("repr() string: ", repr(mydate))

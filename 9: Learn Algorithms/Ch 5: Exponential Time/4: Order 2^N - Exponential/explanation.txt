@@ -1,0 +1,3 @@
+O(2^n) is the first Big O class that we've dealt with that falls into the scary exponential category of algorithms.
+
+Algorithms that grow at an exponential rate become impossible to compute after so few iterations that they are almost worthless in practicality.

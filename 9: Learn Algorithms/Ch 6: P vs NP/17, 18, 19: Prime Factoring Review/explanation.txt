@@ -1,0 +1,34 @@
+def prime_factors(n):
+    prime_factors = []
+    while n % 2 == 0:
+        n /= 2
+        prime_factors.append(2)
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
+        while n % i == 0:
+            n /= i
+            prime_factors.append(i)
+    if n > 2:
+        prime_factors.append(int(n))
+    return prime_factors
+
+1. NP Hard
+2. Yes
+3. O(sqrt(n)) O(sqrt(2^s))
+
+
+
+Big O Analysis
+
+Let us denote n as the integer input, and s as the size of n in bits. s = log2(n)
+
+Notice that our first loop iterates log(n) times and the second loop iterates sqrt(n) times. The Big O with respect to n is O(sqrt(n))! That's fast! That's polynomial complexity which would lead us to believe the problem is in P
+Wait!
+
+The problem is that, by definition, when computer scientists talk about this problem, they are talking about the length of n in bits. What we will call s. For example, the integer 255 only takes 8 bits.
+
+241 = 11110001 in binary
+
+Since s = log2(n), a complexity of O(sqrt(n)) is equivalent to O(sqrt(2^s))
+
+The complexity in respect to the number of bits is exponential.
+

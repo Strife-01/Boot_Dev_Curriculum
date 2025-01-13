@@ -1,0 +1,8 @@
+Back in the 1970s, some computer scientist researchers wanted to come up with a good, descriptive name for the set of polynomial time algorithms. After much deliberation, they settled on the letter P (naming things is hard).
+
+The hand-wavy takeaway is that:
+
+    Problems that fall into class P are practical to solve on computers.
+    Problems that don't fall into P are hard, slow, and impractical.
+
+More Practical to solve with computers
