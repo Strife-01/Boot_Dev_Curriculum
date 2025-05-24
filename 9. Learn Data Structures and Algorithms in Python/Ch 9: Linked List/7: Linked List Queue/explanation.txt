@@ -1,0 +1,1 @@
+to add to tail in O(1) instead of O(n) we need to use a tail instance variable to keep track of it

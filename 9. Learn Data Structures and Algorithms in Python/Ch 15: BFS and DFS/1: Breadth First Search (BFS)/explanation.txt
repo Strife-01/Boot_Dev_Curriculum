@@ -1,0 +1,20 @@
+Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at a root (some arbitrary node on a graph), and explores all of the neighbor nodes at the present depth before going on to the nodes at the next depth level.
+
+Non-integer sets are not "stable" in Python - the order of elements in a set is not guaranteed to be the same each time you iterate over it.
+
+While testing, we want our algorithm to search the same way every time to make debugging easier. Python offers a sorted() function we can call on our set() that will return a sorted iterable.
+
+sorted_items = sorted(unsorted_set)
+
+O(Vertex + Edge)
+
+- Best path
+- Web crawling
+
+- Very good when thinking the solution is very close to your starting point
+- Uses more memory than depth fist search
+
+1. You start at a point
+2. You add it to visit
+3. You then add all its neighbors to to visit
+4. You visit the neighbors and their neighbors

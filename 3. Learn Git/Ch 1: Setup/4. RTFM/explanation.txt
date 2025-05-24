@@ -1,0 +1,17 @@
+Let's take a look at the official Git manual. Run the following command in your terminal:
+
+man git
+
+Shortcuts for the manual:
+
+    q: Quits the manual
+    j: One line down
+    k: One line up
+    d: Half page down
+    u: Half page up
+    /<term>: Search for "term"
+    n: Next search term
+    N: Previous search term
+
+Search for the term AUTHORS (all caps) and answer the question.
+Linus Torvalds

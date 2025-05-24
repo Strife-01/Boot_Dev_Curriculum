@@ -1,0 +1,7 @@
+
+    A properly-ordered tree pre-rotation remains a properly-ordered tree post-rotation
+    Rotations are O(1) operations
+    When rotating left:
+        The "pivot" node's initial parent becomes its left child
+        The "pivot" node's old left child becomes its initial parent's new right child
+

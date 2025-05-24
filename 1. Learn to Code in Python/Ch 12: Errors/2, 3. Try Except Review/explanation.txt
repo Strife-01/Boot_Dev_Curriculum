@@ -1,0 +1,2 @@
+the except block won't execute
+the program crashes and prints the exception

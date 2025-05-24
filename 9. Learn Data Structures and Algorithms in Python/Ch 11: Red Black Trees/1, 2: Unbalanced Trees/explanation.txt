@@ -1,0 +1,6 @@
+on average the BST has O(log(n)) deletion, lookup and insertion, it can break down fast if the data is sorted or almost sorted as it will be added deep. 
+
+An unbalanced tree can bring up the time to o(n) instead of o(log(n))
+
+1. O(n)
+2. No

@@ -1,6 +1,0 @@
-4 pillars of OOP:
-Encapsulation
-Abstraction
-Inheritance
-Polymorphism
-

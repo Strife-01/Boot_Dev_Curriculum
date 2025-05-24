@@ -1,0 +1,1 @@
+xxd path/to/file/from-before > /tmp/commit_object_hex.txt

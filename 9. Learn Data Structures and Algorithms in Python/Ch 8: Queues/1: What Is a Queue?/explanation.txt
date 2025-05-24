@@ -1,0 +1,10 @@
+It's called a "queue" because it behaves like a queue of people waiting in line. The first person to get in line is the first person to get out of line. You'll often hear a queue referred to as a FIFO (first in, first out) data structure.
+
+For us Americans, "queue" sounds like a fancy academic term, but UK English speakers typically say "waiting in a queue" instead of "waiting in line". Alan Turing was British, so we'll let y'all have this one.
+
+
+Enqueue
+Dequeue
+Peek
+
+

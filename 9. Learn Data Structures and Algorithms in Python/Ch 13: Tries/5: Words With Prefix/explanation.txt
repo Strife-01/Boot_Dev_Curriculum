@@ -1,0 +1,24 @@
+Prefix
+
+In a trie, "hello", "help" and "hi" would be represented as:
+
+{
+	"h": {
+		"e": {
+			"l": {
+				"l": {
+					"o": {
+						"*": True
+					}
+				},
+				"p": {
+					"*": True
+				}
+			}
+		},
+		"i": {
+			"*": True
+		}
+	}
+}
+

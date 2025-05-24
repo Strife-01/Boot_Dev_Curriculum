@@ -1,0 +1,9 @@
+To use rebase to bring changes from main onto a current branch (let's pretend we're on one called jdsl), we would run this while on the jdsl branch:
+
+git rebase main
+
+This will do the following:
+
+    Identify the latest commit from main and use it as the temporary new base for the rebase process
+    Replay each commit from jdsl one at a time onto this temporary location
+    Update the jdsl branch to point to the last replayed commit in the temporary location, making this the new permanent jdsl.

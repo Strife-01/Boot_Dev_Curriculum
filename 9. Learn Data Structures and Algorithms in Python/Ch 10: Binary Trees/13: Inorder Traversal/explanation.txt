@@ -1,0 +1,12 @@
+An "inorder" traversal is the most intuitive way to visit all the nodes in a tree. It's called "inorder" because the current node is visited between its children. It results in an ordered list of the nodes in the tree. The following tree:
+
+    > 7
+        > 6
+> 4
+    > 2
+        > 1
+
+Would be visited in this order:
+
+[1, 2, 4, 6, 7]
+

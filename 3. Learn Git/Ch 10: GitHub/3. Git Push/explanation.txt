@@ -1,0 +1,13 @@
+The git push command pushes (sends) local changes to any "remote" - in our case, GitHub. For example, to push our local main branch's commits to the remote origin's main branch we would run:
+
+git push origin main
+You can also push a local branch to a remote with a different name:
+
+git push origin <localbranch>:<remotebranch>
+
+It's less common to do this, but nice to know.
+
+You can also delete a remote branch by pushing an empty branch to it:
+
+git push origin :<remotebranch>
+

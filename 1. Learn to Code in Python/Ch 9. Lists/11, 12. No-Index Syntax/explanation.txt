@@ -1,0 +1,2 @@
+When we don't need to know the index, just the value
+for item in items

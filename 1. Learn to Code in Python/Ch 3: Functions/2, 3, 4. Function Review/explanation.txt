@@ -1,0 +1,3 @@
+The function is defined
+A value is returned from the function
+Because only the value of the variable is passed to the function. It is then assigned to a new variable called 'r'

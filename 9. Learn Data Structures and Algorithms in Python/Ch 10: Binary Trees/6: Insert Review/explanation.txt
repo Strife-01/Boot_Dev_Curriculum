@@ -1,0 +1,5 @@
+Inserting into a binary tree (like most of its operations) is very fast. Picture the algorithm that you just wrote in your head: how many comparisons does it take to find the right spot for a new node?
+
+It only requires one comparison for each level of the tree, making it O(log(n)) (at least in a balanced tree, we'll talk about this later). Order log n is very fast - for practical purposes, it's basically as good as O(1). If our tree has 1,000,000 nodes, we only need to make 20 comparisons to find the right spot for a new node. If our tree is 2x larger (2,000,000 nodes), we only need to make one more comparison per insert, 21 total.
+
+O(log(n))

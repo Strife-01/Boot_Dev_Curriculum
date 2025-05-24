@@ -1,0 +1,11 @@
+Here's a diagram of a fast-forward merge. Before:
+
+      C     other_branch
+     /
+A - B       main
+
+After git merge other_branch:
+
+            other_branch
+A - B - C   main
+

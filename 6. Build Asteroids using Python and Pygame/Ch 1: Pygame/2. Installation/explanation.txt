@@ -1,0 +1,22 @@
+
+Pygame
+
+Pygame is a module for developing games using Python. It provides simple functions and methods for us to easily draw images within a GUI window and handle user input.
+Virtual Environment (venv)
+
+Virtual environments are Python's way to keep dependencies (e.g. the pygame module) separate from other projects on our machine. For example, we need pygame version 2 for this project, but another project on your computer might require version 1.
+
+As a best practice, each Python project on your machine should have its own virtual environment to keep them isolated from each other.
+
+
+python3 -m venv venv
+source venv/bin/activate
+
+requirements.txt
+pygame==2.6.1
+
+pip install -r requirements.txt
+
+python3 -m pygame
+
+the shebang needs to be the on in the environment directory in order to use the modules we install in the environment as they are locally installed in the env 

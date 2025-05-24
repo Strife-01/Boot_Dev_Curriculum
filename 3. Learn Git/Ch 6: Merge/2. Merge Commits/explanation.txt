@@ -1,0 +1,26 @@
+Let's say we start with this:
+
+A - B - C    main
+   \
+    D - E    vimchadsonly
+
+And we merge vimchadsonly into main by running this while on main:
+
+git merge vimchadsonly
+
+The merge will:
+
+    Find the "merge base" commit, or "best common ancestor" of the two branches. In this case, A.
+    Replays the changes from main, starting from the best common ancestor, into a new commit.
+    Replays the changes from vimchadsonly onto main, starting from the best common ancestor.
+    Records the result as a new commit, in our case, F.
+    F is special because it has two parents, C and E.
+
+After:
+
+A - B - C - F    main
+   \     /
+    D - E        vimchadsonly
+
+git log --oneline --decorate --graph --parents
+git --no-pager log --oneline --decorate --graph --parents

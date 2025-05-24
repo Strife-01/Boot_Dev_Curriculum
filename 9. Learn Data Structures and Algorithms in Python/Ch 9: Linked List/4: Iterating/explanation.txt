@@ -1,0 +1,91 @@
+__iter__() will allow us to implement an iterator in python - it implements the iterator protocol
+__next__() will allow us to return the next element in the iterator.
+This is how we can implement the for in - foreach - with any object in python
+iter() we can use to turn something into an iterator
+next() will allow us to get the next element in the iterator
+
+These methods are overriden
+
+ll = LinkedList()
+ll.add("first")
+ll.add("second")
+ll.add("third")
+for val in ll:
+    print(val)
+
+iter(type, element) - will return elements until it reaches the value of element
+
+A generator is a special kind of iterator. - generator iterator;
+
+We create a generator with yield keyword which is kind of like return but instead of killing the function it creates a function object on the heap instead of the stack in order to perform lazy evaluation and keep track of what has been returned. It also pauses the execution and it it regained when the next(gen) is called again
+
+def create_message_generator():
+    yield "hi"
+    yield "there"
+    yield "friend"
+
+gen = create_message_generator()
+first = next(gen)
+print(first)  # prints: hi
+second = next(gen)
+print(second)  # prints: there
+third = next(gen)
+print(third)  # prints: friend
+
+calling create_message_generator() will create a new generator so we need to assign it to a new variable instead if we want to keep the same generator.
+
+
+We use them in order to be able to parse through them with for in.
+
+
+class Squares:
+    def __init__(self, length):
+        self.length = length
+        self.current = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current >= self.length:
+            raise StopIteration
+
+        self.current += 1
+        return self.current ** 2
+
+square_num = Squares(5)
+
+for sq in square_num:
+    print(sq)
+
+print(next(square_num))
+
+
+
+class Run:
+  def __init__(self, highest):
+    self.highest = highest
+
+  # Creating an iterator object
+  def __iter__(self):
+      self.value = 1
+      return self
+
+  # Move to next element using __next__
+  def __next__(self):
+      # Storing the current i value
+      value = self.value
+
+    # Stop iteration if limit is reached
+      if value > self.highest:
+          raise StopIteration
+
+    # double & return old value
+      self.value = value * 2
+      return value
+
+# Outputs the numbers till value reaches highest = 50
+for x in Run(50):
+    print(x)
+
+

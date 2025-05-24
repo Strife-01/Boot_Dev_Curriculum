@@ -1,0 +1,2 @@
+To do the same thing over and over without writing the same code
+Because printing only happens while i is strictly less then 1000

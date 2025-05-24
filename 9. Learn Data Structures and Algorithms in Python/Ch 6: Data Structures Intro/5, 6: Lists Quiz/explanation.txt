@@ -1,0 +1,7 @@
+def last_work_experience(work_experiences):
+    if len(work_experiences) > 0:
+        return work_experiences[len(work_experiences) - 1]
+    return None
+
+1. O(1)
+2. The computer can jump straight to the location of an index - an index is like an address of an item in the list

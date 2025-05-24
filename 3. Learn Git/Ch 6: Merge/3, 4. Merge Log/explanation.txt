@@ -1,0 +1,23 @@
+git log --oneline --decorate --graph --parents
+
+Your output from git log --oneline --decorate --graph --parents (aside from the hashes) should look something like:
+
+*   89629a9 d234104 b8dfd64 (HEAD -> main) F: Merge branch 'add_classics'
+|\
+| * b8dfd64 fba0999 (tag: 5.8, add_classics) D: add classics
+* | d234104 fba0999 (tag: 6.1) E: update contents
+|/
+* fba0999 1381199 (tag: 3.8, origin/master, origin/main, master) C: add quotes
+* 1381199 a21228f (tag: 3.7) B: add titles.md
+* a21228f A: add contents.md
+
+Each asterisk * represents a commit in the repository. There are multiple commit hashes on each line because the --parents flag logs the parent hash(es) as well.
+
+    The first line, with these three hashes: 89629a9 d234104 b8dfd64 is our recent merge commit. The first hash, 89629a9 is the merge commit's hash, and the other two are the parent commits.
+    The next section is a visual representation of the branch structure. It shows the commits on the add_classics branch and the main branch before the merge. Notice that they both share a common parent.
+    The next two lines are just "normal" commits, each pointing to their parent.
+    The last line is the initial commit and therefore has no parent.
+
+
+Because it's a merge commit. It shows its own hash, and the hash of both its parents.
+It's a graph showing 'add_classics' was merged into 'main'

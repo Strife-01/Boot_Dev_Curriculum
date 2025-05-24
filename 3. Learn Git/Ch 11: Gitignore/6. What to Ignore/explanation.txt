@@ -1,0 +1,45 @@
+We've talked about how to ignore files, but the deeper question is what should you ignore? Here are some rules of thumb for coding projects:
+
+    Ignore things that can be generated (e.g. compiled code, minified files, etc.)
+    Ignore dependencies (e.g. node_modules, venv, packages, etc.)
+    Ignore things that are personal or specific to how you like to work (e.g. editor settings)
+    Ignore things that are sensitive or dangerous (e.g. .env files, passwords, API keys, etc.)
+Let's ignore a generated file. We ignore generated files because they can easily be regenerated from the stuff we do track. In this case, we're going to use Pandoc to generate HTML from a Markdown file. We'll ignore the HTML file, but commit the Markdown file.
+
+    Install Pandoc, a command line tool for converting between different document formats. If you're on Mac:
+
+brew install pandoc
+
+If you're on Ubuntu (e.g. WSL):
+
+sudo apt install pandoc
+
+    Run pandoc --version to ensure it's installed. See the installation guide if you're having trouble.
+    Create a new file at the root of the repository called advert.md with the following content:
+
+# WebFlyx: The Future of Content
+
+You thought you knew what the web was capable of. You were _wrong_. WebFlyx is taking the world of online entertainment to an entirely new level. Grab a copy of it at your local electronics store today!
+
+**Available on Floppy Disk!**
+
+_While supplies last._
+
+    Run the following command to generate an HTML document (webpage) from the Markdown file:
+
+pandoc advert.md -o advert.html
+
+    For fun, open the HTML in your browser to see a nicely formatted version of the Markdown file.
+
+# WSL
+explorer.exe advert.html
+
+# Mac
+open advert.html
+
+# Linux
+xdg-open advert.html
+
+    Add the advert.html file to the .gitignore file and commit your changes with a message starting with N:.
+
+Run and submit the CLI tests from the root of the project.

@@ -1,0 +1,7 @@
+Unordered
+
+Python uses 2 arrays dk_indices and dk_entries
+dk_indices hasindex for the hash index in the dk_entries
+we compute the hash of the key to get the index in the dk_indices and that will give us the index for the dk_entries which contains hash, key, entry
+
+and dk_entries is the one that is always ordered and the one that we parse with a for loop to get the entries in the same order

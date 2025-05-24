@@ -1,0 +1,3 @@
+my_set.remove("item")
+Dictionary
+To store all the possible spells in a game

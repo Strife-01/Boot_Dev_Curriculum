@@ -1,0 +1,16 @@
+Git stores author information so that when you're making a commit it can track who made the change. Here's how you might update your global Git configuration (don't do this yet):
+
+git config --add --global user.name "ThePrimeagen"
+git config --add --global user.email "the.primeagen@aol.com"
+
+Let's take the command apart:
+
+    git config: The command to interact with your Git configuration.
+    --add: Flag stating you want to add a configuration.
+    --global: Flag stating you want this configuration to be stored globally in your ~/.gitconfig. The opposite is "local", which stores the configuration in the current repository only.
+    user: The section.
+    name: The key within the section.
+    "ThePrimeagen": The value you want to set for the key.
+
+git config --list --local
+cat .git/config

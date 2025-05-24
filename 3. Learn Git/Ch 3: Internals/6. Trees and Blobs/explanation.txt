@@ -1,0 +1,21 @@
+Now that we understand some of our plumbing equipment, let's get into the pipes. Here are some terms to know:
+
+    tree: git's way of storing a directory
+    blob: git's way of storing a file
+
+Here's what I got when I inspected my last commit:
+
+> git cat-file -p 5ba786fcc93e8092831c01e71444b9baa2228a4f
+
+tree 4e507fdc6d9044ccd8a4a3061324c9f711c4667d
+author ThePrimeagen <the.primeagen@aol.com> 1705891256 -0700
+committer ThePrimeagen <the.primeagen@aol.com> 1705891256 -0700
+
+A: add contents.md
+
+
+
+    Use git cat-file -p again, but this time with the hash of the tree object instead of the commit hash. You should see a blob object with its own hash.
+    Use cat-file again to view the contents of the blob object.
+    Run that same command, but this time redirect the output to a temporary file: /tmp/blobfile.txt.
+

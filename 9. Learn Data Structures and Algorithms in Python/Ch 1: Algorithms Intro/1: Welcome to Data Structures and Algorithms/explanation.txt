@@ -1,0 +1,19 @@
+Goals of This Course
+
+    Learn to think about how to organize data for more efficient access. Break problems down into data models that make sense.
+    Learn and practice performance optimization. Make your code run faster and more efficiently, even with more data.
+    Practice solving hard problems. There's no way around it, if you want to be a great developer, you need to solve hard problems.
+
+What Is a Data Structure?
+
+Data structures are just organizational tools that allow for more advanced algorithms. You're already familiar with some of the simplest data structures:
+
+    Lists: Ordered collections of data
+    Dictionaries: Key -> value mappings
+    Sets: Unordered collections of unique data
+
+In this course we'll be exploring when you should use each of these, but we'll also cover more advanced structures like stacks, queues, and trees.
+    Learn to think algorithmically. Break problems down into easier to solve parts.
+    Learn about performance optimization. Make your code run faster and more efficiently, even with more data.
+    Practice solving hard problems. There's no way around it, if you want to be a great developer, you need to solve hard problems.
+

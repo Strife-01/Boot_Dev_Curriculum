@@ -1,0 +1,6 @@
+git merge remote/branch
+
+For example, if you wanted to merge the primeagen branch of the remote origin into your local main branch, you would run this inside the local repo while on the main branch:
+
+git merge origin/primeagen
+

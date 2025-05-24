@@ -1,0 +1,2 @@
+git switch -c update_dune COMMITHASH
+git log --oneline -n 1

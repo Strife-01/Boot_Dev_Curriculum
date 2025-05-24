@@ -1,0 +1,1 @@
+Add a new method to the Player class called rotate. It's going to take one argument: dt (I told you we'd use it!). When it's called, it should add PLAYER_TURN_SPEED * dt to the player's current rotation.

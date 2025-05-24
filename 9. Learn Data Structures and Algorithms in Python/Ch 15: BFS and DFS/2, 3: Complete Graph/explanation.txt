@@ -1,0 +1,6 @@
+A complete graph is a graph where every pair of vertices is connected by an edge.
+
+Undirected graph = n(n-1)/2
+
+1. 15
+2. an edge connecting all pairs of vertices

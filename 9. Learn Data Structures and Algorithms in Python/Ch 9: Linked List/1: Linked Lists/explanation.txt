@@ -1,0 +1,11 @@
+To be able to build our faster queue, we're going to need to use a Linked List instead of an array under the hood. A linked list is a linear data structure where elements are not stored next to each other in memory. The elements in a linked list are linked using references to each other.
+
+linked list nodes
+Nodes
+
+Our nodes will be represented by a simple class with two fields:
+
+    val - The raw string value that the node holds (e.g. 'Carla', 'James', etc)
+    next - A reference to the next node in the list
+
+

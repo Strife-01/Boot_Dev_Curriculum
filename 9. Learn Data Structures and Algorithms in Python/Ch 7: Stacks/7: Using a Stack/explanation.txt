@@ -1,0 +1,18 @@
+
+Balanced Parentheses
+
+Parentheses are balanced when each parenthesis has a corresponding parenthesis, and the pairs of parentheses are properly nested. For example:
+
+    ()
+    ()()
+    ((()))
+    (()(()))
+
+Unbalanced Parentheses
+
+    (
+    ())
+    (()()
+    (()))
+
+

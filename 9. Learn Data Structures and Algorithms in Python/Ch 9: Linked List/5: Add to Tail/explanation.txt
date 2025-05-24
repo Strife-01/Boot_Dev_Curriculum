@@ -1,0 +1,1 @@
+Time to give our Linked List the ability to add a new node to the end of the list. This will be similar to a regular Python list's append method.

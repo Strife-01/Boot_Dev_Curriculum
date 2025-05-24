@@ -1,0 +1,24 @@
+
+
+    Fast Lookups: Hashmaps have an average time complexity of O(1) for lookups, insertions, and deletions.
+    Unordered: Hashmaps (typically) do not guarantee any particular order of keys.
+    No Ranging: While hashmaps are great for lookups, they don't provide the ability to look into a range of keys (e.g. the largest ten keys). That's one reason production databases like Postgres use binary trees for indexing.
+    Collision Resistant: Hashmaps are built on top of arrays and use a hash function to convert a key into an index. Production-ready implementations (like Python dictionaries) handle hash collisions and make them a non-issue in practice.
+    Hashable Keys: Keys must be hashable. This means they must be immutable and have a consistent hash value. For example, in Python, a tuple can be a key, but a list cannot.
+    Efficient Resizing: When a hashmap's capacity is exceeded, it dynamically resizes (usually by doubling in size) and rehashes the elements. A good hashmap manages this resizing efficiently, minimizing performance hits.
+    Uniform Distribution: A good hash function ensures keys are distributed evenly across the hashmap's underlying array, minimizing the number of collisions and optimizing lookup speed.
+Our toy hashmap:
+
+def key_to_index(self, key):
+    sum = 0
+    for c in key:
+        sum += ord(c)
+    return sum % len(self.hashmap)
+
+Has a few big problems, but at least its valuable for understanding the concepts. Some of its big problems are:
+
+    It doesn't resize when it gets too full, and doesn't handle collisions
+    Its hash function is simplistic and doesn't distribute keys evenly
+
+1. They would collide as they have the same unicode sum
+2. It allocates a large List in memory even if we haven't filled all the indexes

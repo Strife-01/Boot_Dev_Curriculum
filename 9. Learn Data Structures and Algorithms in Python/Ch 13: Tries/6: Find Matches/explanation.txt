@@ -1,0 +1,3 @@
+Tries are super efficient when it comes to finding substrings in a large document of text. For LockedIn, we want to be able to find all of the instances of bad words in chat messages and filter them out.
+
+If we just split on whitespace and matched against a dictionary, we would miss substrings. For example, if we had the word "darn" in our dictionary, we would allow the word "darnit" to slip through undetected. That's why we'll use a trie

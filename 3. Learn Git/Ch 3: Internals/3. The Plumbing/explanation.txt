@@ -1,0 +1,14 @@
+All the data in a Git repository is stored directly in the (hidden) .git directory. That includes all the commits, branches, tags, and other objects we'll learn about later.
+
+Git is made up of objects that are stored in the .git/objects directory. A commit is just a type of object.
+
+
+Assignment
+
+    Use git log -n 10 to find your commit hash again.
+    Use ls -al to list the contents of the .git/objects directory.
+    Look for a directory that suspiciously matches the first two characters of your commit hash.
+    Use ls -al to list the contents of that directory and answer the question.
+
+
+The commit objects are stored in a directory that is named the first 2 letters of the hash of the commit and the actual commit object is named with the rest of the characters of the commit hash 

@@ -1,0 +1,6 @@
+
+    add_to_tail: Constant time insert
+    remove_from_head: Constant time pop
+We will rename the LinkedList class to LLQueue and remove the add_to_head functionality because Queues don't allow inserting into the wrong end.
+
+We've also flipped the arrows in the printed representation to reflect the change.

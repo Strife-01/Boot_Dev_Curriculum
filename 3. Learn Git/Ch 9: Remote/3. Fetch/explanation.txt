@@ -1,0 +1,4 @@
+Adding a remote to our Git repo does not mean that we automagically have all the contents of the remote. First, we need to fetch the contents.
+
+
+git fetch

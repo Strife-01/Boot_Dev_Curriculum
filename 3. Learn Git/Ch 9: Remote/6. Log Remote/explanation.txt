@@ -1,0 +1,5 @@
+The git log command isn't only useful for your local repo. You can log the commits of a remote repo as well!
+
+git log remote/branch
+git log origin/primeagen
+git --no-pager log origin/update_dune --oneline

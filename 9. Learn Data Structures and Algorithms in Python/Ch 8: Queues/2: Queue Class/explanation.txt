@@ -1,0 +1,4 @@
+n hear words used interchangeably in programming. For example, here we're saying push and pop, but enqueue and dequeue are also common words for the same ideas.
+term 1 	term 2 	description
+Push 	Enqueue 	Adds an item to the tail of the queue
+Pop 	Dequeue 	Removes and returns an item from the head of the queue

@@ -1,0 +1,12 @@
+A "postorder" traversal also visits all the nodes in a tree. It's called "postorder" because the current node is visited after its children. The following tree:
+
+    > 7
+        > 6
+> 4
+    > 2
+        > 1
+
+Would be visited in this order:
+
+[1, 2, 6, 7, 4]
+

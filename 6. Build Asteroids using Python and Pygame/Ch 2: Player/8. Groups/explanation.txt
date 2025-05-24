@@ -1,0 +1,19 @@
+The Group class is a container that holds and manages multiple game objects. We can organize our objects into various groups to track them more easily.
+
+
+my_group = pygame.sprite.Group()
+
+To add all instances of a Player to two groups, group_a and group_b in this example, we add a class variable (or static field) called containers to the class just like so (with literally this one line, you don't need to bother with adding this field to the class declaration):
+
+Player.containers = (group_a, group_b)
+
+
+for thing in group:
+    thing.do_something(some_value)
+
+
+You may also call the .update() method for every member of a group by calling it on the group itself:
+
+group.update(dt)
+
+

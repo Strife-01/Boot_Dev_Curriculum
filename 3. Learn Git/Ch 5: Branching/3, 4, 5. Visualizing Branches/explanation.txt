@@ -1,0 +1,22 @@
+A - B - C  main
+
+means a branch called main with 3 commits. C is the most recent commit (the tip), B is the previous commit, and A is the commit before that. To represent multiple branches, we'll use multiple lines:
+
+    D - E  other_branch
+  /
+A - B - C  main
+
+Assignment
+
+Answer the questions based on this diagram:
+
+       G - H    lanes_branch
+      /
+A - B - C - D   main
+  \
+   E - F        primes_branch
+
+
+1. A B G H
+2. A B C D
+3. A E F

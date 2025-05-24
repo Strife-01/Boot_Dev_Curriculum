@@ -1,0 +1,5 @@
+Merge the pull request on GitHub to bring the remote add_classics branch into the remote main branch. You should see that it added 4 commits.
+Delete the remote add_classics branch (GitHub will prompt you to do so after the merge is successful).
+Switch back to your main branch locally.
+Run git pull origin main to bring the changes from the remote main branch to your local main branch. You should see a fast-forward merge.
+Delete the local add_classics branch: git branch -d add_classics

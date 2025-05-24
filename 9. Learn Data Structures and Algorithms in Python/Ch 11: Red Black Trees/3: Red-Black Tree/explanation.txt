@@ -1,0 +1,9 @@
+A Red-Black Tree is a BST that has some more extra logic at insertion and deletion to make sure that the data is balanced or almost balanced.
+
+Principle:
+Each node has an additional field called color
+The color can be black or red and it helps, by additional logic, to ensure the tree stays approximately balanced.
+
+The "red" and "black" nomenclature is arbitrary - you could call them "red vs blue" trees (shout-out rooster teeth), or not even call it "color" at all. The important part is just that we now have two "types" of nodes and that will affect the algorithm for balancing it.
+
+

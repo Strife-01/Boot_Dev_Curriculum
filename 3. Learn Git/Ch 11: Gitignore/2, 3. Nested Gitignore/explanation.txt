@@ -1,0 +1,32 @@
+Your .gitignore file does not necessarily need to be at the root of your project.
+
+It's fairly common to have multiple .gitignore files in different directories throughout a project. A nested .gitignore file only applies to the directory it's in and its subdirectories.
+
+Let's say you have the following setup:
+
+src/
+├── assets/
+│   ├── .gitignore
+|   ├── cover_art.jpg
+│   └── onlydevs.png
+├── main.py
+├── tests.py
+├── venv/
+│   └── bin/
+|       ├── activate
+│       └── python
+.gitignore
+
+Here are the contents of src/assets/.gitignore:
+
+onlydevs.png
+main.py
+
+Here are the contents of the root .gitignore:
+
+venv/bin/activate
+
+
+
+src/assets/onlydevs.png
+tests.py

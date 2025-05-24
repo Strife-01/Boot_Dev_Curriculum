@@ -1,0 +1,16 @@
+class Trie:
+    def find_matches(self, document):
+        matches = set()
+        for i in range(len(document)):
+            level = self.root
+            for j in range(i, len(document)):
+                ch = document[j]
+                if ch not in level:
+                    break
+                level = level[ch]
+                if self.end_symbol in level:
+                    matches.add(document[i : j + 1])
+        return matches
+
+1. O(n*m) where n is the length of the document and the m is the depth of the trie
+2. Because we would need to check every substring in the document this allows us to bail on each given starting character

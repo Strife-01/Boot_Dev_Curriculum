@@ -1,0 +1,3 @@
+the program will crash with an uncaught exception, this is because exception is much more general than ZeroDivisionError
+it will print other
+it will print other

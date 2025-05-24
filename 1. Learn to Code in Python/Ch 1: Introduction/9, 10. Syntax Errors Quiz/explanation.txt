@@ -1,0 +1,2 @@
+The rule for valid code in a programming language
+You'll get an error message from the Python interpreter and the code won't execute

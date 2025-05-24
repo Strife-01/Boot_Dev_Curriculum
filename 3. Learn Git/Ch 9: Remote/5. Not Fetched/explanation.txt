@@ -1,0 +1,2 @@
+Just because we fetched all of the metadata from the remote webflyx repo doesn't mean we have all of the files.
+To demonstrate this, run git log inside the webflyx-local repo. You should see that you don't have any commits.

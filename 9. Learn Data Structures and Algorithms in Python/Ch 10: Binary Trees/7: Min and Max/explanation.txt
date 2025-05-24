@@ -1,0 +1,1 @@
+the get min and get max in a btree should be the easiest functions and they should only loop to max left and max right

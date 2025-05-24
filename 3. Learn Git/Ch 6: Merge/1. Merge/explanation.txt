@@ -1,0 +1,13 @@
+Let's say you're in a state where you have two branches, each with their own unique commits:
+
+A - B - C    main
+   \
+    D - E    other_branch
+
+If you merge other_branch into main, Git combines both branches by creating a new commit that has both histories as parents. In the diagram below, F is a merge commit that has C and E as parents. F brings all the changes from D and E back into the main branch.
+
+A - B - C - F    main
+   \     /
+    D - E        other_branch
+
+git log --oneline --graph --all

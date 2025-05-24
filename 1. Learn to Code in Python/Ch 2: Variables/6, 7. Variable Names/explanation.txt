@@ -1,0 +1,9 @@
+Name 	Description 	Code 	Language(s) that recommend it
+Snake Case 	All words are lowercase and separated by underscores 	my_hero_health 	Python, Ruby, Rust
+Camel Case 	Capitalize the first letter of each word except the first one 	myHeroHealth 	JavaScript, Java
+Pascal Case 	Capitalize the first letter of each word 	MyHeroHealth 	C#, C++
+No Casing 	All lowercase with no separation 	myherohealth 	No one: don't do this
+
+
+heroHealth
+hero_health

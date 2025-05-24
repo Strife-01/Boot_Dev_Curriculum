@@ -1,0 +1,7 @@
+In pygame, there is a base class called Sprite, to represent visual objects.
+
+
+        if hasattr(self, "containers"):
+            super().__init__(self.containers)
+        else:
+            super().__init__()

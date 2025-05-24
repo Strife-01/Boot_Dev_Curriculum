@@ -1,0 +1,9 @@
+Just like we created a webflyx-local repo and used webflyx as a remote, GitHub makes it easy to create "remote" repos that are hosted on their servers.
+
+
+curl -sS https://webi.sh/gh | sh
+gh auth status
+gh auth login
+git ls-remote
+
+

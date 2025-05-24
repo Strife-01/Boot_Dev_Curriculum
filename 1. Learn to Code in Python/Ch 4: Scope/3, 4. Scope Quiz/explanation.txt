@@ -1,0 +1,2 @@
+Yes, because the pi variable is in the global scope
+No, variables defined inside a function are not accessible outside of it

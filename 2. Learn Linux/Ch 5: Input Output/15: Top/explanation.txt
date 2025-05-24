@@ -1,0 +1,28 @@
+Top
+
+The top command is a powerful tool that allows you to see which programs are using the most resources on your computer.
+
+I use the top command all the time, both on my local machine and on remote servers to diagnose performance issues. If you've ever opened up your task manager on Windows or Activity Monitor on macOS, top is similar, but for the command line.
+Assignment
+
+    Open your terminal and run the top command.
+
+Notice that the top command runs in a loop, updating the information every few seconds.
+
+By default, top sorts the processes by CPU usage, with the most CPU-intensive processes at the top. Another useful resource to sort by is memory (RAM) usage. To sort by memory usage, press M (uppercase) while top is running.
+
+What programs on your computer are using the most CPU and memory? Poke around a bit and see what you can find.
+
+    Copy the column names from your terminal (the entire top row of the top command's output) and paste them into the text box on the right. Don't submit yet.
+
+    Exit the top command by pressing q.
+
+Submit the column names you copied in the text box on the right.
+Troubleshooting
+
+    top might not print some columns if your terminal window isn't wide enough to fit them. Try to resize your window or zoom out (reduce font size) and ensure that you print all columns. Otherwise, your submission might fail.
+
+    If your system is set up a with a non-English locale, make sure that your printed output matches the expected by running this instead:
+
+LANG=C top
+

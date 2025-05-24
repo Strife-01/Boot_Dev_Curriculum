@@ -1,0 +1,17 @@
+Trees aren't particularly useful data structures unless they're ordered in some way. One of the most common types of ordered tree is a Binary Search Tree or BST. In addition to the properties we've already talked about, a BST has some additional constraints:
+
+    Instead of an unbounded list of children, each node has at most 2 children
+    The left child's value must be less than its parent's value
+    The right child's value must be greater than its parent's value
+    No two nodes in the BST can have the same value
+
+By ordering the tree this way, we'll be able to add, remove, find, and update nodes much more quickly.
+
+BST are the useful trees
+
+To sort data in a binary tree we can sort by id or we can create a topological sorting for search.
+
+They are very fast for searching log2(n) as we cut the tree in half every time.
+
+1. 2
+2. Ordered: left child < parent < right child
