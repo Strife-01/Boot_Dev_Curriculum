@@ -1,0 +1,11 @@
+Mark and Sweep
+
+We finally have enough machinery in place to start thinking about the "Mark and Sweep" part of our garbage collector.
+The Algorithm
+
+Mark and Sweep garbage collection was first described by John McCarthy in 1960, primarily for managing memory in ((lisp)). It's a two-phase algorithm:
+
+    Mark Phase: Traverses the object graph, marking all reachable objects.
+    Sweep Phase: Scan memory, collecting all unmarked objects, which are considered garbage.
+
+Note! We don't keep track of how many times a particular object is referenced, like we did with reference counting! Instead, we keep track of which objects are referenced in each stack frame and then traverse our container objects looking for any other referenced objects. That's what "traverse the object graph" means - a fancy way of saying "look for objects".

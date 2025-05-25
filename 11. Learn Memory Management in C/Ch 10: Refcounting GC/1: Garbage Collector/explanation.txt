@@ -1,0 +1,6 @@
+go
+
+Reference Counting - each object needs to have a referenced counter
+Mark and Sweep - tree data structure with references (touches)
+
+GC Pause
