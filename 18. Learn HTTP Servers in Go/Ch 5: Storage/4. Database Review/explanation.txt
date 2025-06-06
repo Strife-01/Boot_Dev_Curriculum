@@ -1,0 +1,21 @@
+Database Review
+
+It's very standard to use database software to store web server data on disk. Sometimes that database runs on the same host machine as your server (like we're doing on your local machine), but it's also common to have a separate database server that your server connects to over the network.
+
+db architecture diagram
+
+That's why we use a connection URL: it can point to a local database or a remote one.
+Popular Databases
+
+You don't need to know about all of these, but you might be curious about some of the database technologies out there. Here are a few of the most popular ones:
+
+    PostgreSQL: A fantastic open-source SQL database.
+    MySQL: Another open-source SQL database. Less fantastic IMO.
+    MongoDB: A popular open-source NoSQL document database.
+    Firebase: A popular cloud-based NoSQL database service.
+    SQLite: A popular embedded SQL database.
+
+Feel free to browse DB Engine if you want to dive deeper into the world of database technologies.
+
+
+Data in memory is lost when the server is restarted, data on disk persists

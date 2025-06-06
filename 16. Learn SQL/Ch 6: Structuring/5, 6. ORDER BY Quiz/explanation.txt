@@ -1,0 +1,2 @@
+DESC
+SELECT * FROM people ORDER BY age DESC;

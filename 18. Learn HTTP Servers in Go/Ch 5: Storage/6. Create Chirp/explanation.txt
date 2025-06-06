@@ -1,0 +1,34 @@
+Our API needs to support standard CRUD operations for "chirps". A "chirp" is just a short message that a user can post to the API, like a tweet.
+Assignment
+
+    Add a POST /api/chirps handler. It accepts a JSON payload with a body field:
+
+{
+  "body": "Hello, world!",
+  "user_id": "123e4567-e89b-12d3-a456-426614174000"
+}
+
+Delete the /api/validate_chirp endpoint that we created before, but port all that logic into this one. Users should not be allowed to create invalid chirps!
+
+    If the chirp is valid, you should save it in the database with:
+        A new random id: A UUID
+        created_at: A non-null timestamp
+        updated_at: A non null timestamp
+        body: A non-null string
+        user_id: This should reference the id of the user who created the chirp, and ON DELETE CASCADE, which will cause a user's chirps to be deleted if the user is deleted.
+
+You'll need a new up/down migration for this table.
+
+As a general rule it's always a good idea to use created_at and updated_at timestamps for all your resources. It gives you a nice audit trail and makes it easier to debug issues.
+
+    If creating the record goes well, respond with a 201 status code and the full chirp resource:
+
+{
+  "id": "94b7e44c-3604-42e3-bef7-ebfcc3efff8f",
+  "created_at": "2021-01-01T00:00:00Z",
+  "updated_at": "2021-01-01T00:00:00Z",
+  "body": "Hello, world!",
+  "user_id": "123e4567-e89b-12d3-a456-426614174000"
+}
+
+Yes, this isn't secure because it means any user can create a chirp on behalf of any other user. We'll fix that in a future assignment.

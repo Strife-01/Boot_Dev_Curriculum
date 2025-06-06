@@ -1,0 +1,25 @@
+
+Making a GET Request in Go
+
+There are two basic ways to make a Get request in Go.
+
+    The simple but less powerful way: http.Get
+    The verbose but more powerful way: http.Client, http.NewRequest, and http.Client.Do
+
+If all you need to do is make a simple GET request to a URL, http.Get will work:
+
+resp, err := http.Get("https://jsonplaceholder.typicode.com/users")
+
+If you need to customize things like headers, cookies, or timeouts, you'll want to create a custom http.Client, and http.NewRequest, then use the client's Do method to execute it.
+
+client := &http.Client{
+	Timeout: time.Second * 10,
+}
+
+req, err := http.NewRequest("GET", "https://jsonplaceholder.typicode.com/users", nil)
+if err != nil {
+	log.Fatal(err)
+}
+
+resp, err := client.Do(req)
+

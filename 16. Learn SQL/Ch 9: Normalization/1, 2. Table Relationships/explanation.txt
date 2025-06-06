@@ -1,0 +1,23 @@
+Table Relationships
+
+Relational databases are powerful because of the relationships between the tables. These relationships help us to keep our databases clean and efficient. A relationship between tables assumes that one of these tables has a foreign key that references the primary key of another table.
+
+Your browser does not support playing HTML5 video. You can instead. Here is a description of the content: one to many
+
+Types of Relationships
+
+There are 3 primary types of relationships in a relational database:
+
+    One-to-one
+    One-to-many
+    Many-to-many
+
+relationships
+One-to-one
+
+A one-to-one relationship most often manifests as a field or set of fields on a row in a table. For example, a user will have exactly one password.
+
+Settings fields might be another example of a one-to-one relationship. A user will have exactly one email_preference and exactly one birthday.
+
+A transaction's 'note'
+One to One

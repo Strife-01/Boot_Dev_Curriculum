@@ -1,0 +1,25 @@
+net/http
+
+In this course, we'll be using Go's standard net/http package and the http.Client to make HTTP requests. In fact, we've already been using it! The http.Get function uses the http.DefaultClient under the hood.
+Making a Request
+
+import (
+	"fmt"
+	"io"
+	"net/http"
+)
+
+func getProjects() ([]byte, error) {
+	res, err := http.Get("https://api.jello.com/projects")
+	if err != nil {
+		return nil, fmt.Errorf("error making request: %w", err)
+	}
+	defer res.Body.Close()
+
+	data, err := io.ReadAll(res.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response: %w", err)
+	}
+	return data, nil
+}
+

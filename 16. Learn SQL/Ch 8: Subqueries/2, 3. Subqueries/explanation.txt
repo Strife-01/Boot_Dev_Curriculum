@@ -1,0 +1,2 @@
+allows you to query the result set of a nested query
+potentially many

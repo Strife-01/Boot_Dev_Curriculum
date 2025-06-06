@@ -1,0 +1,2 @@
+almost always
+Mark a row as deleted instead of actually removing the data

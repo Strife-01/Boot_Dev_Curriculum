@@ -1,0 +1,2 @@
+go init() functions are special, they are called authomatically before main
+there can be multiple init functions

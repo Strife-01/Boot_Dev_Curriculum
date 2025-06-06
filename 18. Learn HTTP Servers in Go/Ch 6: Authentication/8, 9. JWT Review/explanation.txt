@@ -1,0 +1,20 @@
+JWT Review
+
+JWTs are cryptographically signed JSON objects that contain information about an authenticated user.
+
+I've heard "JWT" pronounced as "jot", but I pronounce it "jay double yoo tee".
+JWTs Can't Be Changed
+
+We'll talk about MACs, HMACs, and digital signatures in a later course, which are the cryptographic concepts that power JWTs. For now, it's just important to know that once the token is created by a server, the data in the token can't be changed without the server being aware of it.
+
+When your server issues a JWT to Bob, Bob can use that token to make requests as Bob to your API. Bob won't be able to change the token to make requests as Alice.
+JWTs Are Not Encrypted
+
+JWTs are not encrypted. Anyone who has the token can read the data (like the expiry and the user id) in the token. This is why you should never store sensitive information in a JWT. It's just a way to authenticate a user.
+
+I like using JWT.io to inspect JWTs. It is a great tool for playing around with them and learning how they work.jwt lifecycle
+
+
+
+True
+The server will know because the signature will be invalid

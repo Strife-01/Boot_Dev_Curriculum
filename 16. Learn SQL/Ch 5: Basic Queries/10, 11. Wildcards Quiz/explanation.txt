@@ -1,0 +1,3 @@
+values that start with 'or' and are at least 3 characters long
+singing
+

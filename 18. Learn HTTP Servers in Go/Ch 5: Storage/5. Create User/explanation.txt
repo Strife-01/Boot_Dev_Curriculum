@@ -1,0 +1,48 @@
+We've written the SQL query, now it's time to write the API handler that will allow users to create a new user.
+The Context Package
+
+The context package is a part of Go's standard library. It does several things, but the most important thing is that it handles timeouts. All of SQLC's database queries accept a context.Context as their first argument:
+
+user, err := cfg.db.CreateUser(r.Context(), params.Email)
+
+By passing your handler's http.Request.Context() to the query, the library will automatically cancel the database query if the HTTP request is canceled or times out.
+
+The benefit is that it will save your server from getting bogged down by long-running queries!
+
+
+
+Assignment
+
+    Add a new endpoint to your server POST /api/users that allows users to be created. It accepts an email as JSON in the request body and returns the user's ID, email, and timestamps in the response body.
+
+Request:
+
+{
+  "email": "user@example.com"
+}
+
+Response:
+
+HTTP 201 Created
+
+{
+  "id": "50746277-23c6-4d85-a890-564c0044c2fb",
+  "created_at": "2021-07-07T00:00:00Z",
+  "updated_at": "2021-07-07T00:00:00Z",
+  "email": "user@example.com"
+}
+
+    Update the POST /admin/reset endpoint to delete all users in the database (but don't mess with the schema). You'll need a new SQLC query for this. Add a new value to your .env file called PLATFORM and set it equal to "dev". Read it into your apiConfig. If PLATFORM is not equal to "dev", this endpoint should return a 403 Forbidden. This ensures that this extremely dangerous endpoint can only be accessed in a local development environment.
+
+
+I created a User struct in my main package. When the database package returns a database.User, I map it to my main package's User struct before marshalling it to JSON so that I can control the JSON keys:
+
+type User struct {
+	ID        uuid.UUID `json:"id"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
+	Email     string    `json:"email"`
+}
+
+Alternatively, you can use the 'emit_json_tags` configuration option to automatically include the JSON tags. However, in larger projects, this may be more restrictive than useful.
+

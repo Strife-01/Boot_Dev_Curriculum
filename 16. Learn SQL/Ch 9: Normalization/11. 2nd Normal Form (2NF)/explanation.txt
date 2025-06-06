@@ -1,0 +1,30 @@
+A table in second normal form follows all the rules of 1st normal form, and one additional rule which only applies to composite primary keys:
+
+    All columns that are not part of the primary key are dependent on the entire primary key, and not just one of the columns in the primary key.
+
+Example of 1st NF, but Not 2nd NF
+
+In this table, the primary key is a combination of first_name + last_name.
+first_name 	last_name 	first_initial
+Lane 	Wagner 	l
+Lane 	Small 	l
+Allan 	Wagner 	a
+
+This table does not adhere to 2NF. The first_initial column is entirely dependent on the first_name column, rendering it redundant.
+Example of 2nd Normal Form
+
+One way to convert the table above to 2NF is to add a new table that maps a first_name directly to its first_initial. This removes any duplicates!
+first_name 	last_name
+Lane 	Wagner
+Lane 	Small
+Allan 	Wagner
+first_name 	first_initial
+Lane 	l
+Allan 	a
+2NF Is Usually a Good Idea
+
+You should probably default to keeping your tables in second normal form. That said, there are good reasons to deviate from it, particularly for performance reasons. The reason being that when you have to query a second table to get additional data it can take a bit longer.
+
+My rule of thumb is:
+Optimize for data integrity and data de-duplication first. If you have speed issues, de-normalize accordingly.
+

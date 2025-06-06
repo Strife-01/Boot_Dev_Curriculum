@@ -1,0 +1,11 @@
+srv := &http.Server{
+    Addr:    ":" + port,
+    Handler: mux,
+}
+
+log.Printf("Serving files from %s on port: %s\n", filepathRoot, port)
+log.Fatal(srv.ListenAndServe())
+
+
+A struct that describes a sever configuation
+The main function blocks until the server is shut down

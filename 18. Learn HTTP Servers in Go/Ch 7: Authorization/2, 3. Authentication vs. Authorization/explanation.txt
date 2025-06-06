@@ -1,0 +1,13 @@
+Authentication vs. Authorization
+
+As we covered briefly, authentication and authorization are two different things.
+Authentication
+
+Verify who a user is, typically by asking for a password, api key, or other credentials.
+Authorization
+
+Only allow a verified user to perform actions that they are allowed to perform. Sometimes it's based on exactly who they are, but often it's based on a role, like "admin" or "owner".
+
+
+Authorization
+Authentication

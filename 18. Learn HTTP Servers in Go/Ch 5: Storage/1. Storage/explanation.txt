@@ -1,0 +1,82 @@
+Storage
+
+Arguably the most important part of your typical web application is the storage of data. It would be pretty useless if each time you logged into your account on YouTube, Twitter or GitHub, all of your subscriptions, tweets, or repositories were gone.
+Memory vs. Disk
+
+When you run a program on your computer (like our HTTP server), the program is loaded into memory. Memory is a lot like a scratch pad. It's fast, but it's not permanent. If the program terminates or restarts, the data in memory is lost.
+
+When you're building a web server, any data you store in memory (in your program's variables) is lost when the server is restarted. Any important data needs to be saved to disk via the file system.
+Option 1: Raw Files
+
+We could take our user's data, serialize it to JSON, and save it to disk in .json files (or any other format for that matter). It's simple, and will even work for small applications. Trouble is, it will run into problems fast:
+
+    Concurrency: If two requests try to write to the same file at the same time, you'll get overwritten data.
+    Scalability: It's not efficient to read and write large files to disk for every request.
+    Complexity: You'll have to write a lot of code to manage the files, and the chances of bugs are high.
+
+Option 2: a Database
+
+At the end of the day, a database technology like MySQL, PostgreSQL, or MongoDB "just" writes files to disk. The difference is that they also come with all the fancy code and algorithms that make managing those files efficient and safe. In the case of a SQL database, the files are abstracted away from us entirely. You just write SQL queries and let the DB handle the rest.
+
+We will be using option 2: PostgreSQL. It's a production-ready, open-source SQL database. It's a great choice for many web applications, and as a back-end engineer, it might be the single most important database to be familiar with.
+Assignment
+
+    Install Postgres v15 or later.
+
+macOS with brew
+
+brew install postgresql@15
+
+Linux / WSL (Debian). Here are the docs from Microsoft, but simply:
+
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+    Ensure the installation worked. The psql command-line utility is the default client for Postgres. Use it to make sure you're on version 15+ of Postgres:
+
+psql --version
+
+    (Linux only) Update postgres password:
+
+sudo passwd postgres
+
+Enter a password, and be sure you won't forget it. You can just use something easy like postgres.
+
+    Start the Postgres server in the background
+        Mac: brew services start postgresql@15
+        Linux: sudo service postgresql start
+    Connect to the server. I recommend simply using the psql client. It's the "default" client for Postgres, and it's a great way to interact with the database. While it's not as user-friendly as a GUI like PGAdmin, it's a great tool to be able to do at least basic operations with.
+
+Enter the psql shell:
+
+    Mac: psql postgres
+    Linux: sudo -u postgres psql
+
+You should see a new prompt that looks like this:
+
+postgres=#
+
+    Create a new database. I called mine chirpy:
+
+CREATE DATABASE chirpy;
+
+    Connect to the new database:
+
+\c chirpy
+
+You should see a new prompt that looks like this:
+
+chirpy=#
+
+    Set the user password (Linux only)
+
+ALTER USER postgres WITH PASSWORD 'postgres';
+
+For simplicity, I used postgres as the password. Before, we altered the system user's password, now we're altering the database user's password.
+
+    Query the database
+
+From here you can run SQL queries against the chirpy database. For example, to see the version of Postgres you're running, you can run:
+
+SELECT version();
+

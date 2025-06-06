@@ -1,0 +1,2 @@
+System that converts domain names to ip addresses
+Keep the DNS system up and running

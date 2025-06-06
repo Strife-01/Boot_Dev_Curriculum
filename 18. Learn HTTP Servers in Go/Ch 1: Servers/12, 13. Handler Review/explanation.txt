@@ -1,0 +1,26 @@
+
+Handler
+
+An http.Handler is any defined type that implements the set of methods defined by the Handler interface, specifically the ServeHTTP method.
+
+type Handler interface {
+	ServeHTTP(ResponseWriter, *Request)
+}
+
+The ServeMux you used in the previous exercise is an http.Handler.
+
+You will typically use a Handler for more complex use cases, such as when you want to implement a custom router, middleware, or other custom logic.
+HandlerFunc
+
+type HandlerFunc func(ResponseWriter, *Request)
+
+You'll typically use a HandlerFunc when you want to implement a simple handler. The HandlerFunc type is just a function that matches the ServeHTTP signature above.
+Why This Signature?
+
+The Request argument is fairly obvious: it contains all the information about the incoming request, such as the HTTP method, path, headers, and body.
+
+The ResponseWriter is less intuitive in my opinion. The response is an argument, not a return type. Instead of returning a value all at once from the handler function, we write the response to the ResponseWriter.
+
+
+Any of these
+*Request

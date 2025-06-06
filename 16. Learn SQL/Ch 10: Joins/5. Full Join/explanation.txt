@@ -1,0 +1,1 @@
+every single row from two tables, whether or not they're related
